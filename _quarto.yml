@@ -6,8 +6,6 @@ website:
   title: Welcome!
   navbar: 
     left: 
-      - href: index.qmd
-        text: Home
       - quali.qmd
       - about.qmd
       

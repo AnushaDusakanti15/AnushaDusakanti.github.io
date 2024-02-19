@@ -12,6 +12,6 @@ I am currently pursuing my Masters in Data Analytics Engineering at George Mason
 
 My passion to learn about data and its applications, made me choose this course for my Masters. I am confident that my proficiency in Java, Python, AWS will aid me in completing this course and I am looking forward to learn about R and using it for data visualizations.
 
-To know about my education, please navigate to [Education](https://anushadusakanti15.github.io/AnushaDusakanti.github.io/quali.html).
+To know about my education, please navigate to [Education](https://anushadusakanti15.github.io/quali.html).
 
-To know about my work experience, please navigate to [Work Experience](https://anushadusakanti15.github.io/AnushaDusakanti.github.io/about.html).
+To know about my work experience, please navigate to [Work Experience](https://anushadusakanti15.github.io/about.html).
