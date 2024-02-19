@@ -1,0 +1,19 @@
+---
+title: "Work Experience"
+format: html
+editor: visual
+---
+
+-   I completed an internship with Virtusa Consulting Services Pvt Ltd for 4 months.
+
+-   I worked as an Associate Engineer at Virtusa Consulting Services Pvt Ltd for 1.6 years.
+
+During this whole tenure at Virtusa, I was able to learn about AWS services and worked on a project and on a POC.
+
+BMO – Digital Core B2B – TIBCO BW to AWS
+
+Period: January 2023 - Present
+
+Role: Developer
+
+Migrating TIBCO on-premises API from on-premises servers to AWS Cloud Environment. This migration requires understanding the business logic and creating the request and response structure of the API from the TIBCO Designer and understanding the design given by the AWS architect.

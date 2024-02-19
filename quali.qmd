@@ -1,0 +1,13 @@
+---
+title: "Education"
+format: html
+editor: visual
+---
+
+I have completed my education from the below institutions:
+
+-   B.Tech in Computer Science and Engineering from MLR Institute of Technology, with 7.4 CGPA, in 2022
+
+-   12^th^ grade from Narayana Junior College, with 94.2%, in 2018
+
+-   10^th^ grade from Silver Oaks International School, with 9.8 CGPA, in 2016.

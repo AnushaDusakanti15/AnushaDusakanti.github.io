@@ -1,0 +1,16 @@
+project: 
+  type: website
+  output-dir: docs
+
+website: 
+  title: Welcome!
+  navbar: 
+    left: 
+      - href: index.qmd
+      - quali.qmd
+      - about.qmd
+      
+format: 
+  html: 
+    theme: minty
+  
