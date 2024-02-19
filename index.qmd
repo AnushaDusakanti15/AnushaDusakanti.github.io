@@ -6,7 +6,7 @@ editor: visual
 
 ## 
 
-Hi everyone, I am Anusha Dusakanti and welcome to my website!
+Hi everyone, I am Anusha Dusakanti and welcome to my website.
 
 I am currently pursuing my Masters in Data Analytics Engineering at George Mason University.
 
