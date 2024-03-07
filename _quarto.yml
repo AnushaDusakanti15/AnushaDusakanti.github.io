@@ -10,7 +10,9 @@ website:
         text: Home
       - quali.qmd
       - about.qmd
-      
+      - Midproject.qmd
+      - Redesign.qmd
+
 format: 
   html: 
     theme: minty

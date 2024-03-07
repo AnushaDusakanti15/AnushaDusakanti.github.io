@@ -1,0 +1,52 @@
+---
+title: "Redesigning project"
+format: html
+editor: visual
+---
+
+The bad graph we have taken is:
+
+![](images/Unemployment_rate_in_Japan.svg-01.png)
+
+
+```{r echo = FALSE}
+suppressMessages(library(dplyr))
+lfs_sexage_raw = read.csv("/Users/anushadusakanti/Documents/GitHub/AnushaDusakanti15.github.io/LFS_SEXAGE_I_R_05032024021852784.csv")
+unemployment_rate_japan = subset(lfs_sexage_raw, Country == 'Japan' & Age == '15 to 24' & Series == 'Unemployment rate')
+unemployment_rate_japan = select(unemployment_rate_japan, Sex, Time, Value)
+unemployment_rate_japan$Value = round(unemployment_rate_japan$Value, digits = 2)
+unemployment_rate_japan <- unemployment_rate_japan %>% 
+  rename(Year = Time)
+
+row.names(unemployment_rate_japan) = NULL
+
+```
+
+
+```{r echo = FALSE}
+data1994_2004 = subset(unemployment_rate_japan, Year >= 1994 & Year  <= 2004)
+row.names(data1994_2004) = NULL
+echo = FALSE
+```
+
+Our first redesign for the bad graph is:
+```{r echo = FALSE}
+suppressMessages(library(ggplot2))
+suppressMessages(library(plotly))
+cc <- c("green","blue", "red")
+
+graph <- ggplot(data1994_2004, aes(x = Year, y = Value, fill = Sex, group=1,
+                                  text = paste("Sex:", Sex, "<br>Year:", Year, "<br>UR:", Value))) +
+  geom_line(color="black") +
+  geom_point(shape = 21, size = 2.8) + 
+  labs(x = "Year", y = "Unemployment Rate", title = "Unemployment Rate in Japan") +
+  facet_wrap(~ Sex) +
+  scale_fill_manual(values = cc) +
+  labs(fill = "Population") +
+  theme_grey() 
+
+ggplotly(graph, tooltip = "text")
+```
+
+```{r}
+```

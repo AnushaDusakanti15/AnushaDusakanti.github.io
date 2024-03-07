@@ -1,0 +1,79 @@
+---
+title: "MidProject code"
+format: html
+editor: visual
+---
+
+Importing the CSV File containing Raw Data of Unemployment Rate alone
+
+```{r}
+lfs_sexage_raw = read.csv("/Users/anushadusakanti/Documents/GitHub/AnushaDusakanti15.github.io/LFS_SEXAGE_I_R_05032024021852784.csv")
+```
+
+Understanding the structure of the data frame
+
+```{r}
+str(lfs_sexage_raw)
+```
+
+Sub-setting the raw data to select Unemployment Rate data of Japanese Youth
+
+```{r}
+unemployment_rate_japan = subset(lfs_sexage_raw, Country == 'Japan' & Age == '15 to 24' & Series == 'Unemployment rate')
+
+str(unemployment_rate_japan)
+```
+
+Keeping only the required columns, rounding the Unemployment Rate to 2 digits, renaming columns to appropriate names and resetting the row numbers
+
+```{r}
+suppressMessages(library(dplyr))
+unemployment_rate_japan = select(unemployment_rate_japan, Sex, Time, Value)
+unemployment_rate_japan$Value = round(unemployment_rate_japan$Value, digits = 2)
+unemployment_rate_japan <- unemployment_rate_japan %>% 
+  rename(Year = Time)
+
+row.names(unemployment_rate_japan) = NULL
+```
+
+Selecting only the Unemployment Ice Age Years and resetting the row numbers
+
+```{r}
+data1994_2004 = subset(unemployment_rate_japan, Year >= 1994 & Year  <= 2004)
+row.names(data1994_2004) = NULL
+```
+
+Transposing the Unemployment Ice Age data by pivoting the table from long to wide.
+
+```{r}
+suppressMessages(library(tidyr))
+transposed_1994_2004 = pivot_wider(data1994_2004, names_from = "Sex", values_from = "Value")
+```
+
+Grouping the transposed data by Year and renaming the column containing spaces in between
+
+```{r}
+grouped_1994_2004 = transposed_1994_2004 %>%
+  group_by(Year)
+grouped_1994_2004 = grouped_1994_2004 %>% 
+  rename(All.persons = 'All persons')
+```
+
+Creating an interactive bar plot with the manipulated data frame to portray the population during Unemployment Ice Age
+
+```{r}
+suppressMessages(library(plotly))
+
+bar_plt_1994_2004 = plot_ly(grouped_1994_2004, x = ~Year, y = ~All.persons, type = 'bar', name = 'All persons',
+             marker = list(color = 'green')) %>% 
+    add_trace(y = ~Men, name = 'Men', 
+              marker = list(color = 'blue')) %>%
+    add_trace(y = ~Women, name = 'Women', 
+              marker = list(color = 'red')) %>%
+    layout(xaxis = list(title = "Years", tickmode='linear', tickangle = -90),
+           yaxis = list(title = "Unemployment Rate"),
+           title = 'Unemployment Rate during Ice Age \n Japan (1994-2004)',
+            barmode = 'group')
+bar_plt_1994_2004
+```
+
