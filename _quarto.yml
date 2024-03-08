@@ -7,7 +7,7 @@ website:
   navbar: 
     left: 
       - href: index.qmd
-        text: Home
+        text: HOME
       - quali.qmd
       - about.qmd
       - Midproject.qmd
@@ -15,5 +15,5 @@ website:
 
 format: 
   html: 
-    theme: minty
+    theme: united
   

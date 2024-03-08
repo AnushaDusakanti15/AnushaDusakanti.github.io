@@ -1,5 +1,5 @@
 ---
-title: "Education"
+title: "EDUCATION"
 format: html
 editor: visual
 ---

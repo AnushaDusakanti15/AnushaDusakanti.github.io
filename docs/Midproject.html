@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Welcome! - MidProject code</title>
+<title>Welcome! - MIDPROJECT CODE</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -124,23 +124,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">Home</span></a>
+ <span class="menu-text">HOME</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./quali.html" rel="" target="">
- <span class="menu-text">Education</span></a>
+ <span class="menu-text">EDUCATION</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">Work Experience</span></a>
+ <span class="menu-text">WORK EXPERIENCE</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./Midproject.html" rel="" target="" aria-current="page">
- <span class="menu-text">MidProject code</span></a>
+ <span class="menu-text">MIDPROJECT CODE</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./Redesign.html" rel="" target="">
- <span class="menu-text">Redesigning project</span></a>
+ <span class="menu-text">REDESIGNING PROJECT</span></a>
   </li>  
 </ul>
             <div class="quarto-navbar-tools ms-auto">
@@ -159,7 +159,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">MidProject code</h1>
+<h1 class="title">MIDPROJECT CODE</h1>
 </div>
 
 
@@ -204,24 +204,340 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>unemployment_rate_japan <span class="ot">=</span> <span class="fu">subset</span>(lfs_sexage_raw, Country <span class="sc">==</span> <span class="st">'Japan'</span> <span class="sc">&amp;</span> Age <span class="sc">==</span> <span class="st">'15 to 24'</span> <span class="sc">&amp;</span> Series <span class="sc">==</span> <span class="st">'Unemployment rate'</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(unemployment_rate_japan)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>unemployment_rate_japan</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>'data.frame':   165 obs. of  15 variables:
- $ COUNTRY   : chr  "JPN" "JPN" "JPN" "JPN" ...
- $ Country   : chr  "Japan" "Japan" "Japan" "Japan" ...
- $ SEX       : chr  "MW" "MW" "MW" "MW" ...
- $ Sex       : chr  "All persons" "All persons" "All persons" "All persons" ...
- $ AGE       : int  1524 1524 1524 1524 1524 1524 1524 1524 1524 1524 ...
- $ Age       : chr  "15 to 24" "15 to 24" "15 to 24" "15 to 24" ...
- $ SERIES    : chr  "UR" "UR" "UR" "UR" ...
- $ Series    : chr  "Unemployment rate" "Unemployment rate" "Unemployment rate" "Unemployment rate" ...
- $ FREQUENCY : chr  "A" "A" "A" "A" ...
- $ Frequency : chr  "Annual" "Annual" "Annual" "Annual" ...
- $ TIME      : int  1968 1969 1970 1971 1972 1973 1974 1975 1976 1977 ...
- $ Time      : int  1968 1969 1970 1971 1972 1973 1974 1975 1976 1977 ...
- $ Value     : num  1.88 1.83 1.98 2.13 2.39 ...
- $ Flag.Codes: logi  NA NA NA NA NA NA ...
- $ Flags     : logi  NA NA NA NA NA NA ...</code></pre>
+<pre><code>      COUNTRY Country   SEX         Sex  AGE      Age SERIES            Series
+19496     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19497     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19498     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19499     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19500     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19501     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19502     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19503     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19504     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19505     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19506     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19507     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19508     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19509     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19510     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19511     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19512     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19513     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19514     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19515     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19516     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19517     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19518     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19519     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19520     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19521     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19522     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19523     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19524     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19525     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19526     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19527     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19528     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19529     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19530     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19531     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19532     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19533     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19534     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19535     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19536     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19537     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19538     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19539     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19540     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19541     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19542     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19543     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19544     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19545     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19546     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19547     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19548     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19549     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19550     JPN   Japan    MW All persons 1524 15 to 24     UR Unemployment rate
+19551     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19552     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19553     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19554     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19555     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19556     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19557     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19558     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19559     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19560     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19561     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19562     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19563     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19564     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19565     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19566     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19567     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19568     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19569     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19570     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19571     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19572     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19573     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19574     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19575     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19576     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19577     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19578     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19579     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19580     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19581     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19582     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19583     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19584     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19585     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19586     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19587     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19588     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19589     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19590     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19591     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19592     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19593     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19594     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19595     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19596     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19597     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19598     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19599     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19600     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19601     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19602     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19603     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19604     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19605     JPN   Japan   MEN         Men 1524 15 to 24     UR Unemployment rate
+19606     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19607     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19608     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19609     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19610     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19611     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19612     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19613     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19614     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19615     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19616     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19617     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19618     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19619     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19620     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19621     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19622     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19623     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19624     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19625     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19626     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19627     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19628     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19629     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19630     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19631     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19632     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19633     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19634     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19635     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19636     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19637     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19638     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19639     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19640     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19641     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19642     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19643     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19644     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19645     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19646     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19647     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19648     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19649     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19650     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19651     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19652     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19653     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19654     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19655     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19656     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19657     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19658     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19659     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+19660     JPN   Japan WOMEN       Women 1524 15 to 24     UR Unemployment rate
+      FREQUENCY Frequency TIME Time     Value Flag.Codes Flags
+19496         A    Annual 1968 1968  1.875000         NA    NA
+19497         A    Annual 1969 1969  1.828154         NA    NA
+19498         A    Annual 1970 1970  1.983769         NA    NA
+19499         A    Annual 1971 1971  2.129547         NA    NA
+19500         A    Annual 1972 1972  2.390057         NA    NA
+19501         A    Annual 1973 1973  2.344546         NA    NA
+19502         A    Annual 1974 1974  2.474691         NA    NA
+19503         A    Annual 1975 1975  3.048780         NA    NA
+19504         A    Annual 1976 1976  3.129074         NA    NA
+19505         A    Annual 1977 1977  3.537415         NA    NA
+19506         A    Annual 1978 1978  3.755216         NA    NA
+19507         A    Annual 1979 1979  3.394625         NA    NA
+19508         A    Annual 1980 1980  3.576538         NA    NA
+19509         A    Annual 1981 1981  4.011461         NA    NA
+19510         A    Annual 1982 1982  3.917379         NA    NA
+19511         A    Annual 1983 1983  4.526749         NA    NA
+19512         A    Annual 1984 1984  4.904632         NA    NA
+19513         A    Annual 1985 1985  4.774898         NA    NA
+19514         A    Annual 1986 1986  5.165563         NA    NA
+19515         A    Annual 1987 1987  5.235602         NA    NA
+19516         A    Annual 1988 1988  4.853129         NA    NA
+19517         A    Annual 1989 1989  4.455446         NA    NA
+19518         A    Annual 1990 1990  4.316547         NA    NA
+19519         A    Annual 1991 1991  4.462243         NA    NA
+19520         A    Annual 1992 1992  4.357542         NA    NA
+19521         A    Annual 1993 1993  5.105438         NA    NA
+19522         A    Annual 1994 1994  5.450501         NA    NA
+19523         A    Annual 1995 1995  6.094808         NA    NA
+19524         A    Annual 1996 1996  6.727480         NA    NA
+19525         A    Annual 1997 1997  6.643357         NA    NA
+19526         A    Annual 1998 1998  7.720145         NA    NA
+19527         A    Annual 1999 1999  9.275731         NA    NA
+19528         A    Annual 2000 2000  9.198423         NA    NA
+19529         A    Annual 2001 2001  9.712722         NA    NA
+19530         A    Annual 2002 2002 10.043042         NA    NA
+19531         A    Annual 2003 2003 10.164425         NA    NA
+19532         A    Annual 2004 2004  9.472050         NA    NA
+19533         A    Annual 2005 2005  8.647799         NA    NA
+19534         A    Annual 2006 2006  8.000000         NA    NA
+19535         A    Annual 2007 2007  7.704918         NA    NA
+19536         A    Annual 2008 2008  7.239057         NA    NA
+19537         A    Annual 2009 2009  9.075044         NA    NA
+19538         A    Annual 2010 2010  9.222423         NA    NA
+19539         A    Annual 2011 2011  8.023483         NA    NA
+19540         A    Annual 2012 2012  7.945736         NA    NA
+19541         A    Annual 2013 2013  6.883365         NA    NA
+19542         A    Annual 2014 2014  6.285714         NA    NA
+19543         A    Annual 2015 2015  5.523810         NA    NA
+19544         A    Annual 2016 2016  5.118830         NA    NA
+19545         A    Annual 2017 2017  4.595588         NA    NA
+19546         A    Annual 2018 2018  3.760684         NA    NA
+19547         A    Annual 2019 2019  3.660566         NA    NA
+19548         A    Annual 2020 2020  4.576271         NA    NA
+19549         A    Annual 2021 2021  4.623288         NA    NA
+19550         A    Annual 2022 2022  4.203152         NA    NA
+19551         A    Annual 1968 1968  1.867572         NA    NA
+19552         A    Annual 1969 1969  1.916376         NA    NA
+19553         A    Annual 1970 1970  2.061856         NA    NA
+19554         A    Annual 1971 1971  2.325581         NA    NA
+19555         A    Annual 1972 1972  2.669039         NA    NA
+19556         A    Annual 1973 1973  2.509653         NA    NA
+19557         A    Annual 1974 1974  2.736842         NA    NA
+19558         A    Annual 1975 1975  3.456221         NA    NA
+19559         A    Annual 1976 1976  3.448276         NA    NA
+19560         A    Annual 1977 1977  3.957784         NA    NA
+19561         A    Annual 1978 1978  4.359673         NA    NA
+19562         A    Annual 1979 1979  3.631285         NA    NA
+19563         A    Annual 1980 1980  3.977273         NA    NA
+19564         A    Annual 1981 1981  4.237288         NA    NA
+19565         A    Annual 1982 1982  4.201681         NA    NA
+19566         A    Annual 1983 1983  4.594595         NA    NA
+19567         A    Annual 1984 1984  4.851752         NA    NA
+19568         A    Annual 1985 1985  4.838710         NA    NA
+19569         A    Annual 1986 1986  5.235602         NA    NA
+19570         A    Annual 1987 1987  5.426357         NA    NA
+19571         A    Annual 1988 1988  5.050505         NA    NA
+19572         A    Annual 1989 1989  4.679803         NA    NA
+19573         A    Annual 1990 1990  4.513064         NA    NA
+19574         A    Annual 1991 1991  4.719101         NA    NA
+19575         A    Annual 1992 1992  4.575163         NA    NA
+19576         A    Annual 1993 1993  4.935622         NA    NA
+19577         A    Annual 1994 1994  5.591398         NA    NA
+19578         A    Annual 1995 1995  6.113537         NA    NA
+19579         A    Annual 1996 1996  6.798246         NA    NA
+19580         A    Annual 1997 1997  6.935123         NA    NA
+19581         A    Annual 1998 1998  8.158508         NA    NA
+19582         A    Annual 1999 1999 10.319410         NA    NA
+19583         A    Annual 2000 2000 10.432570         NA    NA
+19584         A    Annual 2001 2001 10.666667         NA    NA
+19585         A    Annual 2002 2002 11.325967         NA    NA
+19586         A    Annual 2003 2003 11.560694         NA    NA
+19587         A    Annual 2004 2004 10.638298         NA    NA
+19588         A    Annual 2005 2005  9.876543         NA    NA
+19589         A    Annual 2006 2006  8.805031         NA    NA
+19590         A    Annual 2007 2007  8.280255         NA    NA
+19591         A    Annual 2008 2008  7.894737         NA    NA
+19592         A    Annual 2009 2009 10.069444         NA    NA
+19593         A    Annual 2010 2010 10.431655         NA    NA
+19594         A    Annual 2011 2011  8.949416         NA    NA
+19595         A    Annual 2012 2012  8.745247         NA    NA
+19596         A    Annual 2013 2013  7.604563         NA    NA
+19597         A    Annual 2014 2014  7.116105         NA    NA
+19598         A    Annual 2015 2015  5.947955         NA    NA
+19599         A    Annual 2016 2016  5.714286         NA    NA
+19600         A    Annual 2017 2017  4.693141         NA    NA
+19601         A    Annual 2018 2018  4.054054         NA    NA
+19602         A    Annual 2019 2019  3.947368         NA    NA
+19603         A    Annual 2020 2020  5.000000         NA    NA
+19604         A    Annual 2021 2021  5.084746         NA    NA
+19605         A    Annual 2022 2022  4.878049         NA    NA
+19606         A    Annual 1968 1968  1.883239         NA    NA
+19607         A    Annual 1969 1969  1.730769         NA    NA
+19608         A    Annual 1970 1970  1.897533         NA    NA
+19609         A    Annual 1971 1971  1.904762         NA    NA
+19610         A    Annual 1972 1972  2.066116         NA    NA
+19611         A    Annual 1973 1973  2.159827         NA    NA
+19612         A    Annual 1974 1974  2.173913         NA    NA
+19613         A    Annual 1975 1975  2.590674         NA    NA
+19614         A    Annual 1976 1976  2.770083         NA    NA
+19615         A    Annual 1977 1977  3.089888         NA    NA
+19616         A    Annual 1978 1978  3.125000         NA    NA
+19617         A    Annual 1979 1979  3.151862         NA    NA
+19618         A    Annual 1980 1980  3.170029         NA    NA
+19619         A    Annual 1981 1981  3.779070         NA    NA
+19620         A    Annual 1982 1982  3.623188         NA    NA
+19621         A    Annual 1983 1983  4.456825         NA    NA
+19622         A    Annual 1984 1984  4.958678         NA    NA
+19623         A    Annual 1985 1985  4.709141         NA    NA
+19624         A    Annual 1986 1986  5.093834         NA    NA
+19625         A    Annual 1987 1987  5.039788         NA    NA
+19626         A    Annual 1988 1988  4.651163         NA    NA
+19627         A    Annual 1989 1989  4.228856         NA    NA
+19628         A    Annual 1990 1990  4.116223         NA    NA
+19629         A    Annual 1991 1991  4.195804         NA    NA
+19630         A    Annual 1992 1992  4.128440         NA    NA
+19631         A    Annual 1993 1993  5.287356         NA    NA
+19632         A    Annual 1994 1994  5.299539         NA    NA
+19633         A    Annual 1995 1995  6.074766         NA    NA
+19634         A    Annual 1996 1996  6.650831         NA    NA
+19635         A    Annual 1997 1997  6.326034         NA    NA
+19636         A    Annual 1998 1998  7.250000         NA    NA
+19637         A    Annual 1999 1999  8.157895         NA    NA
+19638         A    Annual 2000 2000  7.880435         NA    NA
+19639         A    Annual 2001 2001  8.707865         NA    NA
+19640         A    Annual 2002 2002  8.656716         NA    NA
+19641         A    Annual 2003 2003  8.668731         NA    NA
+19642         A    Annual 2004 2004  8.253968         NA    NA
+19643         A    Annual 2005 2005  7.371795         NA    NA
+19644         A    Annual 2006 2006  7.166124         NA    NA
+19645         A    Annual 2007 2007  7.094595         NA    NA
+19646         A    Annual 2008 2008  6.551724         NA    NA
+19647         A    Annual 2009 2009  8.070175         NA    NA
+19648         A    Annual 2010 2010  8.000000         NA    NA
+19649         A    Annual 2011 2011  7.086614         NA    NA
+19650         A    Annual 2012 2012  7.114625         NA    NA
+19651         A    Annual 2013 2013  6.153846         NA    NA
+19652         A    Annual 2014 2014  5.426357         NA    NA
+19653         A    Annual 2015 2015  5.078125         NA    NA
+19654         A    Annual 2016 2016  4.494382         NA    NA
+19655         A    Annual 2017 2017  4.494382         NA    NA
+19656         A    Annual 2018 2018  3.460208         NA    NA
+19657         A    Annual 2019 2019  3.367003         NA    NA
+19658         A    Annual 2020 2020  4.137931         NA    NA
+19659         A    Annual 2021 2021  4.152249         NA    NA
+19660         A    Annual 2022 2022  3.521127         NA    NA</code></pre>
 </div>
 </div>
 <p>Keeping only the required columns, rounding the Unemployment Rate to 2 digits, renaming columns to appropriate names and resetting the row numbers</p>
@@ -267,8 +583,198 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">barmode =</span> <span class="st">'group'</span>)</span>
 <span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>bar_plt_1994_2004</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div class="plotly html-widget html-fill-item" id="htmlwidget-06ee70c4daa1556bc32e" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-06ee70c4daa1556bc32e">{"x":{"visdat":{"9f916add06e6":["function () ","plotlyVisDat"]},"cur_data":"9f916add06e6","attrs":{"9f916add06e6":{"x":{},"y":{},"marker":{"color":"green"},"name":"All persons","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"},"9f916add06e6.1":{"x":{},"y":{},"marker":{"color":"blue"},"name":"Men","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","inherit":true},"9f916add06e6.2":{"x":{},"y":{},"marker":{"color":"red"},"name":"Women","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"Years","tickmode":"linear","tickangle":-90},"yaxis":{"domain":[0,1],"automargin":true,"title":"Unemployment Rate"},"title":"Unemployment Rate during Ice Age <br /> Japan (1994-2004)","barmode":"group","hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004],"y":[5.4500000000000002,6.0899999999999999,6.7300000000000004,6.6399999999999997,7.7199999999999998,9.2799999999999994,9.1999999999999993,9.7100000000000009,10.039999999999999,10.16,9.4700000000000006],"marker":{"color":"green","line":{"color":"rgba(31,119,180,1)"}},"name":"All persons","type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004],"y":[5.5899999999999999,6.1100000000000003,6.7999999999999998,6.9400000000000004,8.1600000000000001,10.32,10.43,10.67,11.33,11.56,10.640000000000001],"marker":{"color":"blue","line":{"color":"rgba(255,127,14,1)"}},"name":"Men","type":"bar","error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004],"y":[5.2999999999999998,6.0700000000000003,6.6500000000000004,6.3300000000000001,7.25,8.1600000000000001,7.8799999999999999,8.7100000000000009,8.6600000000000001,8.6699999999999999,8.25],"marker":{"color":"red","line":{"color":"rgba(44,160,44,1)"}},"name":"Women","type":"bar","error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-b5332ab399687933fce5" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-b5332ab399687933fce5">{"x":{"visdat":{"b3e0ec3c47b":["function () ","plotlyVisDat"]},"cur_data":"b3e0ec3c47b","attrs":{"b3e0ec3c47b":{"x":{},"y":{},"marker":{"color":"green"},"name":"All persons","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar"},"b3e0ec3c47b.1":{"x":{},"y":{},"marker":{"color":"blue"},"name":"Men","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","inherit":true},"b3e0ec3c47b.2":{"x":{},"y":{},"marker":{"color":"red"},"name":"Women","alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"bar","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"Years","tickmode":"linear","tickangle":-90},"yaxis":{"domain":[0,1],"automargin":true,"title":"Unemployment Rate"},"title":"Unemployment Rate during Ice Age <br /> Japan (1994-2004)","barmode":"group","hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004],"y":[5.4500000000000002,6.0899999999999999,6.7300000000000004,6.6399999999999997,7.7199999999999998,9.2799999999999994,9.1999999999999993,9.7100000000000009,10.039999999999999,10.16,9.4700000000000006],"marker":{"color":"green","line":{"color":"rgba(31,119,180,1)"}},"name":"All persons","type":"bar","error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004],"y":[5.5899999999999999,6.1100000000000003,6.7999999999999998,6.9400000000000004,8.1600000000000001,10.32,10.43,10.67,11.33,11.56,10.640000000000001],"marker":{"color":"blue","line":{"color":"rgba(255,127,14,1)"}},"name":"Men","type":"bar","error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004],"y":[5.2999999999999998,6.0700000000000003,6.6500000000000004,6.3300000000000001,7.25,8.1600000000000001,7.8799999999999999,8.7100000000000009,8.6600000000000001,8.6699999999999999,8.25],"marker":{"color":"red","line":{"color":"rgba(44,160,44,1)"}},"name":"Women","type":"bar","error_y":{"color":"rgba(44,160,44,1)"},"error_x":{"color":"rgba(44,160,44,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>Redesigning the bar plot and creating a interactive line plot to portray the population with seperate graphs during Unemployment Ice Age</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>cc <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"green"</span>,<span class="st">"blue"</span>, <span class="st">"red"</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>graph <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(data1994_2004, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Value, <span class="at">fill =</span> Sex, <span class="at">group=</span><span class="dv">1</span>,</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">text =</span> <span class="fu">paste</span>(<span class="st">"Sex:"</span>, Sex, <span class="st">"&lt;br&gt;Year:"</span>, Year, <span class="st">"&lt;br&gt;UR:"</span>, Value))) <span class="sc">+</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color=</span><span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">shape =</span> <span class="dv">21</span>, <span class="at">size =</span> <span class="fl">2.8</span>) <span class="sc">+</span> </span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"Unemployment Rate"</span>, <span class="at">title =</span> <span class="st">"Unemployment Rate in Japan"</span>) <span class="sc">+</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Sex) <span class="sc">+</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> cc) <span class="sc">+</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">fill =</span> <span class="st">"Population"</span>) <span class="sc">+</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_grey</span>() </span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplotly</span>(graph, <span class="at">tooltip =</span> <span class="st">"text"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-5d79b345c9756bb1cd42" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-5d79b345c9756bb1cd42">{"x":{"data":[{"x":[1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004],"y":[5.4500000000000002,6.0899999999999999,6.7300000000000004,6.6399999999999997,7.7199999999999998,9.2799999999999994,9.1999999999999993,9.7100000000000009,10.039999999999999,10.16,9.4700000000000006],"text":["Sex: All persons <br>Year: 1994 <br>UR: 5.45","Sex: All persons <br>Year: 1995 <br>UR: 6.09","Sex: All persons <br>Year: 1996 <br>UR: 6.73","Sex: All persons <br>Year: 1997 <br>UR: 6.64","Sex: All persons <br>Year: 1998 <br>UR: 7.72","Sex: All persons <br>Year: 1999 <br>UR: 9.28","Sex: All persons <br>Year: 2000 <br>UR: 9.2","Sex: All persons <br>Year: 2001 <br>UR: 9.71","Sex: All persons <br>Year: 2002 <br>UR: 10.04","Sex: All persons <br>Year: 2003 <br>UR: 10.16","Sex: All persons <br>Year: 2004 <br>UR: 9.47"],"type":"scatter","mode":"lines+markers","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)","dash":"solid"},"hoveron":"points","name":"All persons","legendgroup":"All persons","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(0,255,0,1)","opacity":1,"size":10.58267716535433,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"}},"frame":null},{"x":[1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004],"y":[5.5899999999999999,6.1100000000000003,6.7999999999999998,6.9400000000000004,8.1600000000000001,10.32,10.43,10.67,11.33,11.56,10.640000000000001],"text":["Sex: Men <br>Year: 1994 <br>UR: 5.59","Sex: Men <br>Year: 1995 <br>UR: 6.11","Sex: Men <br>Year: 1996 <br>UR: 6.8","Sex: Men <br>Year: 1997 <br>UR: 6.94","Sex: Men <br>Year: 1998 <br>UR: 8.16","Sex: Men <br>Year: 1999 <br>UR: 10.32","Sex: Men <br>Year: 2000 <br>UR: 10.43","Sex: Men <br>Year: 2001 <br>UR: 10.67","Sex: Men <br>Year: 2002 <br>UR: 11.33","Sex: Men <br>Year: 2003 <br>UR: 11.56","Sex: Men <br>Year: 2004 <br>UR: 10.64"],"type":"scatter","mode":"lines+markers","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)","dash":"solid"},"hoveron":"points","name":"Men","legendgroup":"Men","showlegend":true,"xaxis":"x2","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(0,0,255,1)","opacity":1,"size":10.58267716535433,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"}},"frame":null},{"x":[1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004],"y":[5.2999999999999998,6.0700000000000003,6.6500000000000004,6.3300000000000001,7.25,8.1600000000000001,7.8799999999999999,8.7100000000000009,8.6600000000000001,8.6699999999999999,8.25],"text":["Sex: Women <br>Year: 1994 <br>UR: 5.3","Sex: Women <br>Year: 1995 <br>UR: 6.07","Sex: Women <br>Year: 1996 <br>UR: 6.65","Sex: Women <br>Year: 1997 <br>UR: 6.33","Sex: Women <br>Year: 1998 <br>UR: 7.25","Sex: Women <br>Year: 1999 <br>UR: 8.16","Sex: Women <br>Year: 2000 <br>UR: 7.88","Sex: Women <br>Year: 2001 <br>UR: 8.71","Sex: Women <br>Year: 2002 <br>UR: 8.66","Sex: Women <br>Year: 2003 <br>UR: 8.67","Sex: Women <br>Year: 2004 <br>UR: 8.25"],"type":"scatter","mode":"lines+markers","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)","dash":"solid"},"hoveron":"points","name":"Women","legendgroup":"Women","showlegend":true,"xaxis":"x3","yaxis":"y","hoverinfo":"text","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":10.58267716535433,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"}},"frame":null}],"layout":{"margin":{"t":55.452054794520549,"r":7.3059360730593621,"b":40.182648401826498,"l":37.260273972602747},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"Unemployment Rate in Japan","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,0.32246140465318546],"automargin":true,"type":"linear","autorange":false,"range":[1993.5,2004.5],"tickmode":"array","ticktext":["1994","1996","1998","2000","2002","2004"],"tickvals":[1994,1996,1998,2000,2002,2004],"categoryorder":"array","categoryarray":["1994","1996","1998","2000","2002","2004"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":"","hoverformat":".2f"},"annotations":[{"text":"Year","x":0.5,"y":0,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"top","annotationType":"axis","yshift":-21.917808219178081},{"text":"Unemployment Rate","x":0,"y":0.5,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xref":"paper","yref":"paper","textangle":-90,"xanchor":"right","yanchor":"center","annotationType":"axis","xshift":-21.917808219178088},{"text":"All persons","x":0.16123070232659273,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":11.68949771689498},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"},{"text":"Men","x":0.5,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":11.68949771689498},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"},{"text":"Women","x":0.83876929767340724,"y":1,"showarrow":false,"ax":0,"ay":0,"font":{"color":"rgba(26,26,26,1)","family":"","size":11.68949771689498},"xref":"paper","yref":"paper","textangle":-0,"xanchor":"center","yanchor":"bottom"}],"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[4.9870000000000001,11.873000000000001],"tickmode":"array","ticktext":["6","8","10"],"tickvals":[6,8,10],"categoryorder":"array","categoryarray":["6","8","10"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":"","hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":0.32246140465318546,"y0":0,"y1":1},{"type":"rect","fillcolor":"rgba(217,217,217,1)","line":{"color":"transparent","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":0.32246140465318546,"y0":0,"y1":23.37899543378996,"yanchor":1,"ysizemode":"pixel"},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.34420526201348117,"x1":0.65579473798651877,"y0":0,"y1":1},{"type":"rect","fillcolor":"rgba(217,217,217,1)","line":{"color":"transparent","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0.34420526201348117,"x1":0.65579473798651877,"y0":0,"y1":23.37899543378996,"yanchor":1,"ysizemode":"pixel"},{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0.67753859534681449,"x1":1,"y0":0,"y1":1},{"type":"rect","fillcolor":"rgba(217,217,217,1)","line":{"color":"transparent","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0.67753859534681449,"x1":1,"y0":0,"y1":23.37899543378996,"yanchor":1,"ysizemode":"pixel"}],"xaxis2":{"type":"linear","autorange":false,"range":[1993.5,2004.5],"tickmode":"array","ticktext":["1994","1996","1998","2000","2002","2004"],"tickvals":[1994,1996,1998,2000,2002,2004],"categoryorder":"array","categoryarray":["1994","1996","1998","2000","2002","2004"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"domain":[0.34420526201348117,0.65579473798651877],"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":"","hoverformat":".2f"},"xaxis3":{"type":"linear","autorange":false,"range":[1993.5,2004.5],"tickmode":"array","ticktext":["1994","1996","1998","2000","2002","2004"],"tickvals":[1994,1996,1998,2000,2002,2004],"categoryorder":"array","categoryarray":["1994","1996","1998","2000","2002","2004"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"domain":[0.67753859534681449,1],"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":"","hoverformat":".2f"},"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"Population","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"b3e040466ff3":{"x":{},"y":{},"fill":{},"text":{},"type":"scatter"},"b3e0505fdb7c":{"x":{},"y":{},"fill":{},"text":{}}},"cur_data":"b3e040466ff3","visdat":{"b3e040466ff3":["function (y) ","x"],"b3e0505fdb7c":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>Creating a dataset with unemployment rate of all countries in the year 2022</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>countries_info <span class="ot">=</span> <span class="fu">subset</span>(lfs_sexage_raw, Age <span class="sc">==</span> <span class="st">"15 to 24"</span> <span class="sc">&amp;</span> Series <span class="sc">==</span> <span class="st">"Unemployment rate"</span> <span class="sc">&amp;</span> Time <span class="sc">==</span> <span class="st">"2022"</span> <span class="sc">&amp;</span> Sex <span class="sc">==</span> <span class="st">"All persons"</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>countries_info <span class="ot">&lt;-</span> countries_info[<span class="fu">order</span>(countries_info<span class="sc">$</span>Value), ]</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(countries_info) <span class="ot">=</span> <span class="cn">NULL</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Plotting an interactive map with unemployment rate of all countries in the year 2022</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressWarnings</span>({</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  color_scale <span class="ot">&lt;-</span> <span class="fu">colorRamp</span>(<span class="fu">c</span>(<span class="st">"red"</span>, <span class="st">"orange"</span>,<span class="st">"yellow"</span>))</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  min_value <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">length</span>(countries_info<span class="sc">$</span>Value) <span class="sc">&gt;</span> <span class="dv">0</span>, <span class="fu">min</span>(countries_info<span class="sc">$</span>Value, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="cn">NA</span>)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  max_value <span class="ot">&lt;-</span> <span class="fu">ifelse</span>(<span class="fu">length</span>(countries_info<span class="sc">$</span>Value) <span class="sc">&gt;</span> <span class="dv">0</span>, <span class="fu">max</span>(countries_info<span class="sc">$</span>Value, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="cn">NA</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  fig <span class="ot">&lt;-</span> <span class="fu">plot_ly</span>(countries_info,</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>                 <span class="at">type =</span> <span class="st">"scattergeo"</span>,</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>                 <span class="at">mode =</span> <span class="st">"markers"</span>,</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>                 <span class="at">locationmode =</span> <span class="st">"country names"</span>,</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>                 <span class="at">locations =</span> <span class="sc">~</span>Country,</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>                 <span class="at">color =</span> <span class="sc">~</span>Value,</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>                 <span class="at">text =</span> <span class="sc">~</span><span class="fu">paste</span>(<span class="st">"Country: "</span>, Country, <span class="st">"&lt;br&gt;UR: "</span>, Value),</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>                 <span class="at">colors =</span> color_scale,</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>                 <span class="at">marker =</span> <span class="fu">list</span>(<span class="at">size =</span> <span class="dv">10</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">layout</span>(<span class="at">title =</span> <span class="st">"Unemployment rate in 2022"</span>,</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>           <span class="at">geo =</span> <span class="fu">list</span>(</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>             <span class="at">showframe =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>             <span class="at">projection =</span> <span class="fu">list</span>(<span class="at">type =</span> <span class="st">'mercator'</span>),</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>             <span class="at">bgcolor =</span> <span class="st">"lightblue"</span>,  </span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>             <span class="at">showcoastlines =</span> <span class="cn">TRUE</span>,  </span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>             <span class="at">showland =</span> <span class="cn">TRUE</span>,        </span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>             <span class="at">landcolor =</span> <span class="st">"lightgreen"</span>,  </span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>             <span class="at">showocean =</span> <span class="cn">TRUE</span>,       </span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>             <span class="at">oceancolor =</span> <span class="st">"lightblue"</span>  </span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>           ))<span class="sc">%&gt;%</span></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>          <span class="fu">colorbar</span>(<span class="at">title =</span> <span class="st">"Unemployment Rate"</span>,</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>             <span class="at">tickvals =</span> <span class="fu">seq</span>(min_value, max_value, <span class="at">length.out =</span> <span class="dv">5</span>),</span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>             <span class="at">ticktext =</span> <span class="fu">seq</span>(min_value, max_value, <span class="at">length.out =</span> <span class="dv">5</span>))</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>  fig</span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-bb699aeac1ede2daa7c6" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-bb699aeac1ede2daa7c6">{"x":{"visdat":{"b3e02b17964e":["function () ","plotlyVisDat"]},"cur_data":"b3e02b17964e","attrs":{"b3e02b17964e":{"mode":"markers","locationmode":"country names","locations":{},"text":{},"marker":{"size":10},"color":{},"colors":["function (x) ","roundcolor(cbind(palette[[1L]](x), palette[[2L]](x), palette[[3L]](x), ","    if (alpha) palette[[4L]](x))) * 255"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scattergeo"}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"title":"Unemployment rate in 2022","geo":{"showframe":false,"projection":{"type":"mercator"},"bgcolor":"lightblue","showcoastlines":true,"showland":true,"landcolor":"lightgreen","showocean":true,"oceancolor":"lightblue"},"hovermode":"closest","showlegend":false,"legend":{"yanchor":"top","y":0.5}},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"mode":"markers","locationmode":"country names","locations":["Japan","Germany","Mexico","Israel","Korea","Czechia","Switzerland","Netherlands","United States","Australia","Iceland","New Zealand","Austria","Ireland","Norway","Canada","Slovenia","United Kingdom","Hungary","Denmark","Poland","OECD countries","Lithuania","Finland","Latvia","Belgium","France","Luxembourg","Chile","Estonia","Portugal","Türkiye","Slovak Republic","Sweden","Colombia","Italy","Spain","Costa Rica","Greece"],"text":["Country:  Japan <br>UR:  4.203152364","Country:  Germany <br>UR:  5.951814949","Country:  Mexico <br>UR:  6.52901269","Country:  Israel <br>UR:  6.888515026","Country:  Korea <br>UR:  7.058594763","Country:  Czechia <br>UR:  7.173889234","Country:  Switzerland <br>UR:  7.498923595","Country:  Netherlands <br>UR:  7.632530978","Country:  United States <br>UR:  8.126303812","Country:  Australia <br>UR:  8.151382824","Country:  Iceland <br>UR:  8.441961515","Country:  New Zealand <br>UR:  9.360518999","Country:  Austria <br>UR:  9.474397445","Country:  Ireland <br>UR:  9.773325784","Country:  Norway <br>UR:  10.02039425","Country:  Canada <br>UR:  10.06775717","Country:  Slovenia <br>UR:  10.08027209","Country:  United Kingdom <br>UR:  10.4055045","Country:  Hungary <br>UR:  10.56765627","Country:  Denmark <br>UR:  10.57310504","Country:  Poland <br>UR:  10.79801152","Country:  OECD countries <br>UR:  10.8565446","Country:  Lithuania <br>UR:  11.92773481","Country:  Finland <br>UR:  13.3645879","Country:  Latvia <br>UR:  15.27485831","Country:  Belgium <br>UR:  16.39662002","Country:  France <br>UR:  17.33179852","Country:  Luxembourg <br>UR:  17.60146141","Country:  Chile <br>UR:  17.7739543","Country:  Estonia <br>UR:  18.56033511","Country:  Portugal <br>UR:  19.04620853","Country:  Türkiye <br>UR:  19.43758313","Country:  Slovak Republic <br>UR:  19.90407674","Country:  Sweden <br>UR:  21.73192771","Country:  Colombia <br>UR:  21.8878867","Country:  Italy <br>UR:  23.70301592","Country:  Spain <br>UR:  29.76070894","Country:  Costa Rica <br>UR:  30.96118299","Country:  Greece <br>UR:  31.37228364"],"marker":{"colorbar":{"title":"Value","ticklen":2},"cmin":4.2031523640000001,"cmax":31.372283639999999,"colorscale":[["0","rgba(255,0,0,1)"],["0.0416666666666667","rgba(255,14,0,1)"],["0.0833333333333334","rgba(255,28,0,1)"],["0.125","rgba(255,41,0,1)"],["0.166666666666667","rgba(255,55,0,1)"],["0.208333333333333","rgba(255,69,0,1)"],["0.25","rgba(255,83,0,1)"],["0.291666666666667","rgba(255,96,0,1)"],["0.333333333333333","rgba(255,110,0,1)"],["0.375","rgba(255,124,0,1)"],["0.416666666666667","rgba(255,138,0,1)"],["0.458333333333333","rgba(255,151,0,1)"],["0.5","rgba(255,165,0,1)"],["0.541666666666667","rgba(255,172,0,1)"],["0.583333333333333","rgba(255,180,0,1)"],["0.625","rgba(255,188,0,1)"],["0.666666666666667","rgba(255,195,0,1)"],["0.708333333333333","rgba(255,203,0,1)"],["0.75","rgba(255,210,0,1)"],["0.791666666666667","rgba(255,218,0,1)"],["0.833333333333333","rgba(255,225,0,1)"],["0.875","rgba(255,233,0,1)"],["0.916666666666667","rgba(255,240,0,1)"],["0.958333333333333","rgba(255,248,0,1)"],["1","rgba(255,255,0,1)"]],"showscale":false,"color":[4.2031523640000001,5.9518149490000001,6.5290126900000001,6.8885150260000003,7.0585947630000003,7.1738892339999998,7.4989235949999999,7.6325309780000001,8.1263038119999997,8.1513828240000006,8.4419615149999991,9.360518999,9.4743974449999993,9.7733257840000007,10.020394250000001,10.06775717,10.080272089999999,10.405504499999999,10.567656270000001,10.57310504,10.798011519999999,10.856544599999999,11.92773481,13.3645879,15.274858310000001,16.39662002,17.33179852,17.601461409999999,17.7739543,18.56033511,19.046208530000001,19.43758313,19.904076740000001,21.731927710000001,21.887886699999999,23.703015919999999,29.760708940000001,30.961182990000001,31.372283639999999],"size":10,"line":{"colorbar":{"title":"","ticklen":2},"cmin":4.2031523640000001,"cmax":31.372283639999999,"colorscale":[["0","rgba(255,0,0,1)"],["0.0416666666666667","rgba(255,14,0,1)"],["0.0833333333333334","rgba(255,28,0,1)"],["0.125","rgba(255,41,0,1)"],["0.166666666666667","rgba(255,55,0,1)"],["0.208333333333333","rgba(255,69,0,1)"],["0.25","rgba(255,83,0,1)"],["0.291666666666667","rgba(255,96,0,1)"],["0.333333333333333","rgba(255,110,0,1)"],["0.375","rgba(255,124,0,1)"],["0.416666666666667","rgba(255,138,0,1)"],["0.458333333333333","rgba(255,151,0,1)"],["0.5","rgba(255,165,0,1)"],["0.541666666666667","rgba(255,172,0,1)"],["0.583333333333333","rgba(255,180,0,1)"],["0.625","rgba(255,188,0,1)"],["0.666666666666667","rgba(255,195,0,1)"],["0.708333333333333","rgba(255,203,0,1)"],["0.75","rgba(255,210,0,1)"],["0.791666666666667","rgba(255,218,0,1)"],["0.833333333333333","rgba(255,225,0,1)"],["0.875","rgba(255,233,0,1)"],["0.916666666666667","rgba(255,240,0,1)"],["0.958333333333333","rgba(255,248,0,1)"],["1","rgba(255,255,0,1)"]],"showscale":false,"color":[4.2031523640000001,5.9518149490000001,6.5290126900000001,6.8885150260000003,7.0585947630000003,7.1738892339999998,7.4989235949999999,7.6325309780000001,8.1263038119999997,8.1513828240000006,8.4419615149999991,9.360518999,9.4743974449999993,9.7733257840000007,10.020394250000001,10.06775717,10.080272089999999,10.405504499999999,10.567656270000001,10.57310504,10.798011519999999,10.856544599999999,11.92773481,13.3645879,15.274858310000001,16.39662002,17.33179852,17.601461409999999,17.7739543,18.56033511,19.046208530000001,19.43758313,19.904076740000001,21.731927710000001,21.887886699999999,23.703015919999999,29.760708940000001,30.961182990000001,31.372283639999999]}},"type":"scattergeo","frame":null},{"type":"scattergeo","mode":"markers","opacity":0,"hoverinfo":"none","showlegend":false,"marker":{"colorbar":{"title":"Unemployment Rate","ticklen":2,"len":0.5,"lenmode":"fraction","y":1,"yanchor":"top","tickvals":[4.2031523640000001,10.995435183,17.787718001999998,24.580000820999999,31.372283639999999],"ticktext":[4.2031523640000001,10.995435183,17.787718001999998,24.580000820999999,31.372283639999999]},"cmin":4.2031523640000001,"cmax":31.372283639999999,"colorscale":[["0","rgba(255,0,0,1)"],["0.0416666666666667","rgba(255,14,0,1)"],["0.0833333333333334","rgba(255,28,0,1)"],["0.125","rgba(255,41,0,1)"],["0.166666666666667","rgba(255,55,0,1)"],["0.208333333333333","rgba(255,69,0,1)"],["0.25","rgba(255,83,0,1)"],["0.291666666666667","rgba(255,96,0,1)"],["0.333333333333333","rgba(255,110,0,1)"],["0.375","rgba(255,124,0,1)"],["0.416666666666667","rgba(255,138,0,1)"],["0.458333333333333","rgba(255,151,0,1)"],["0.5","rgba(255,165,0,1)"],["0.541666666666667","rgba(255,172,0,1)"],["0.583333333333333","rgba(255,180,0,1)"],["0.625","rgba(255,188,0,1)"],["0.666666666666667","rgba(255,195,0,1)"],["0.708333333333333","rgba(255,203,0,1)"],["0.75","rgba(255,210,0,1)"],["0.791666666666667","rgba(255,218,0,1)"],["0.833333333333333","rgba(255,225,0,1)"],["0.875","rgba(255,233,0,1)"],["0.916666666666667","rgba(255,240,0,1)"],["0.958333333333333","rgba(255,248,0,1)"],["1","rgba(255,255,0,1)"]],"showscale":true,"color":[4.2031523640000001,31.372283639999999],"line":{"color":"rgba(255,127,14,1)"}},"lat":[null,null],"lon":[null,null],"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+<p>Importing the CSV file containing Japan’s Anual GDP Growth Rate obtained from https://databank.worldbank.org/reports.aspx?source=2&amp;series=NY.GDP.MKTP.KD.ZG&amp;country=JPN#advancedDownloadOptions</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>gdp_annual_1960 <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">"/Users/anushadusakanti/Documents/GitHub/AnushaDusakanti15.github.io/Japan_GDP_Annual_Growth.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Understanding the structure of the dataset</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(gdp_annual_1960)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   72 obs. of  7 variables:
+ $ Series.Name : chr  "GDP growth (annual %)" "GDP growth (annual %)" "GDP growth (annual %)" "GDP growth (annual %)" ...
+ $ Series.Code : chr  "NY.GDP.MKTP.KD.ZG" "NY.GDP.MKTP.KD.ZG" "NY.GDP.MKTP.KD.ZG" "NY.GDP.MKTP.KD.ZG" ...
+ $ Country.Name: chr  "Japan" "Japan" "Japan" "Japan" ...
+ $ Country.Code: chr  "JPN" "JPN" "JPN" "JPN" ...
+ $ Time        : chr  "1960" "1961" "1962" "1963" ...
+ $ Time.Code   : chr  "YR1960" "YR1961" "YR1962" "YR1963" ...
+ $ Value       : chr  ".." "12.0435364080116" "8.90897299558067" "8.47364238279391" ...</code></pre>
+</div>
+</div>
+<p>Selecting only the columns required</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>gdp_annual_1960 <span class="ot">=</span> <span class="fu">select</span>(gdp_annual_1960, Time, Value)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Keeping only the meaningful rows</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>gdp_annual <span class="ot">=</span> <span class="fu">slice</span>(gdp_annual_1960, <span class="dv">9</span><span class="sc">:</span><span class="dv">63</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Data Manipulation - converting character columns to numeric, rounding off percentage to 2 digits, and renaming columns appropriately</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>gdp_annual<span class="sc">$</span>Time <span class="ot">=</span> <span class="fu">as.numeric</span>(gdp_annual<span class="sc">$</span>Time)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>gdp_annual<span class="sc">$</span>Value <span class="ot">=</span> <span class="fu">as.numeric</span>(gdp_annual<span class="sc">$</span>Value)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>gdp_annual<span class="sc">$</span>Value <span class="ot">=</span> <span class="fu">round</span>(gdp_annual<span class="sc">$</span>Value, <span class="at">digits =</span> <span class="dv">2</span>)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>gdp_annual <span class="ot">=</span> gdp_annual <span class="sc">%&gt;%</span> </span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">GDP_Annual_Growth =</span> <span class="st">'Value'</span>)</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>gdp_annual <span class="ot">=</span> gdp_annual <span class="sc">%&gt;%</span> </span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Year =</span> <span class="st">'Time'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Subsetting the population to ‘All persons’ to get an overall unemployment outlook from the previously created Unemployment Rate data of Japanese Youth data frame</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>unemployment_all_persons <span class="ot">=</span> <span class="fu">subset</span>(unemployment_rate_japan, Sex <span class="sc">==</span> <span class="st">'All persons'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Data Manipulation - converting character columns to numeric, rounding off percetnage to 2 digits, and renaming columns appropriately</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>unemployment_time_value <span class="ot">=</span> <span class="fu">select</span>(unemployment_all_persons, Year, Value)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>unemployment_time_value <span class="ot">=</span> unemployment_time_value <span class="sc">%&gt;%</span> </span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Unemployment_Rate =</span> <span class="st">'Value'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Doing an inner join on the GDP data frame and Unemployment Years data frame with the common column ‘Year’</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>gdp_unemployment <span class="ot">=</span> <span class="fu">merge</span>(<span class="at">x =</span> gdp_annual, <span class="at">y =</span> unemployment_time_value, <span class="at">by =</span> <span class="st">'Year'</span>)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>gdp_unemployment</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Year GDP_Annual_Growth Unemployment_Rate
+1  1968             12.88              1.88
+2  1969             12.48              1.83
+3  1970              2.45              1.98
+4  1971              4.70              2.13
+5  1972              8.41              2.39
+6  1973              8.03              2.34
+7  1974             -1.23              2.47
+8  1975              3.09              3.05
+9  1976              3.97              3.13
+10 1977              4.39              3.54
+11 1978              5.27              3.76
+12 1979              5.48              3.39
+13 1980              2.82              3.58
+14 1981              4.26              4.01
+15 1982              3.28              3.92
+16 1983              3.63              4.53
+17 1984              4.41              4.90
+18 1985              5.16              4.77
+19 1986              3.29              5.17
+20 1987              4.65              5.24
+21 1988              6.66              4.85
+22 1989              4.93              4.46
+23 1990              4.84              4.32
+24 1991              3.52              4.46
+25 1992              0.90              4.36
+26 1993             -0.46              5.11
+27 1994              1.08              5.45
+28 1995              2.63              6.09
+29 1996              3.13              6.73
+30 1997              0.98              6.64
+31 1998             -1.27              7.72
+32 1999             -0.33              9.28
+33 2000              2.76              9.20
+34 2001              0.39              9.71
+35 2002              0.04             10.04
+36 2003              1.54             10.16
+37 2004              2.19              9.47
+38 2005              1.80              8.65
+39 2006              1.37              8.00
+40 2007              1.48              7.70
+41 2008             -1.22              7.24
+42 2009             -5.69              9.08
+43 2010              4.10              9.22
+44 2011              0.02              8.02
+45 2012              1.37              7.95
+46 2013              2.01              6.88
+47 2014              0.30              6.29
+48 2015              1.56              5.52
+49 2016              0.75              5.12
+50 2017              1.68              4.60
+51 2018              0.64              3.76
+52 2019             -0.40              3.66
+53 2020             -4.15              4.58
+54 2021              2.56              4.62
+55 2022              0.95              4.20</code></pre>
+</div>
+</div>
+<p>Creating an interactive line chart to depict the relationship between GDP Growth Rate and Unemployment Rate</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>line_gdp_unemp <span class="ot">=</span> <span class="fu">plot_ly</span>(gdp_unemployment, <span class="at">x =</span> <span class="sc">~</span>Year) <span class="sc">%&gt;%</span> </span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_trace</span>(<span class="at">y =</span> <span class="sc">~</span>GDP_Annual_Growth, <span class="at">name =</span> <span class="st">'GDP Annual Growth (in Percentage)'</span>, <span class="at">type =</span> <span class="st">'scatter'</span>, <span class="at">mode =</span> <span class="st">'lines'</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">add_trace</span>(<span class="at">y =</span> <span class="sc">~</span>Unemployment_Rate, <span class="at">name =</span> <span class="st">'Unemployment Rate (in Percentage)'</span>, <span class="at">type =</span> <span class="st">'scatter'</span>, <span class="at">mode =</span> <span class="st">'lines'</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">layout</span>(<span class="at">xaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Years"</span>, <span class="at">tickmode=</span><span class="st">'linear'</span>, <span class="at">tickangle =</span> <span class="sc">-</span><span class="dv">90</span>),</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>           <span class="at">yaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"Percentage"</span>),</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>           <span class="at">title =</span> <span class="st">'GDP Growth Rate vs Unemployment Rate </span><span class="sc">\n</span><span class="st"> Japan (1968-2022)'</span>)</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>line_gdp_unemp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-b75459a311a45984615d" style="width:100%;height:464px;"></div>
+<script type="application/json" data-for="htmlwidget-b75459a311a45984615d">{"x":{"visdat":{"b3e08b092de":["function () ","plotlyVisDat"]},"cur_data":"b3e08b092de","attrs":{"b3e08b092de":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"y":{},"name":"GDP Annual Growth (in Percentage)","type":"scatter","mode":"lines","inherit":true},"b3e08b092de.1":{"x":{},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"y":{},"name":"Unemployment Rate (in Percentage)","type":"scatter","mode":"lines","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"xaxis":{"domain":[0,1],"automargin":true,"title":"Years","tickmode":"linear","tickangle":-90},"yaxis":{"domain":[0,1],"automargin":true,"title":"Percentage"},"title":"GDP Growth Rate vs Unemployment Rate <br /> Japan (1968-2022)","hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022],"y":[12.880000000000001,12.48,2.4500000000000002,4.7000000000000002,8.4100000000000001,8.0299999999999994,-1.23,3.0899999999999999,3.9700000000000002,4.3899999999999997,5.2699999999999996,5.4800000000000004,2.8199999999999998,4.2599999999999998,3.2799999999999998,3.6299999999999999,4.4100000000000001,5.1600000000000001,3.29,4.6500000000000004,6.6600000000000001,4.9299999999999997,4.8399999999999999,3.52,0.90000000000000002,-0.46000000000000002,1.0800000000000001,2.6299999999999999,3.1299999999999999,0.97999999999999998,-1.27,-0.33000000000000002,2.7599999999999998,0.39000000000000001,0.040000000000000001,1.54,2.1899999999999999,1.8,1.3700000000000001,1.48,-1.22,-5.6900000000000004,4.0999999999999996,0.02,1.3700000000000001,2.0099999999999998,0.29999999999999999,1.5600000000000001,0.75,1.6799999999999999,0.64000000000000001,-0.40000000000000002,-4.1500000000000004,2.5600000000000001,0.94999999999999996],"name":"GDP Annual Growth (in Percentage)","type":"scatter","mode":"lines","marker":{"color":"rgba(31,119,180,1)","line":{"color":"rgba(31,119,180,1)"}},"error_y":{"color":"rgba(31,119,180,1)"},"error_x":{"color":"rgba(31,119,180,1)"},"line":{"color":"rgba(31,119,180,1)"},"xaxis":"x","yaxis":"y","frame":null},{"x":[1968,1969,1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022],"y":[1.8799999999999999,1.8300000000000001,1.98,2.1299999999999999,2.3900000000000001,2.3399999999999999,2.4700000000000002,3.0499999999999998,3.1299999999999999,3.54,3.7599999999999998,3.3900000000000001,3.5800000000000001,4.0099999999999998,3.9199999999999999,4.5300000000000002,4.9000000000000004,4.7699999999999996,5.1699999999999999,5.2400000000000002,4.8499999999999996,4.46,4.3200000000000003,4.46,4.3600000000000003,5.1100000000000003,5.4500000000000002,6.0899999999999999,6.7300000000000004,6.6399999999999997,7.7199999999999998,9.2799999999999994,9.1999999999999993,9.7100000000000009,10.039999999999999,10.16,9.4700000000000006,8.6500000000000004,8,7.7000000000000002,7.2400000000000002,9.0800000000000001,9.2200000000000006,8.0199999999999996,7.9500000000000002,6.8799999999999999,6.29,5.5199999999999996,5.1200000000000001,4.5999999999999996,3.7599999999999998,3.6600000000000001,4.5800000000000001,4.6200000000000001,4.2000000000000002],"name":"Unemployment Rate (in Percentage)","type":"scatter","mode":"lines","marker":{"color":"rgba(255,127,14,1)","line":{"color":"rgba(255,127,14,1)"}},"error_y":{"color":"rgba(255,127,14,1)"},"error_x":{"color":"rgba(255,127,14,1)"},"line":{"color":"rgba(255,127,14,1)"},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 

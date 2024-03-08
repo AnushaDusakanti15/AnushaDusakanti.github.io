@@ -1,5 +1,5 @@
 ---
-title: "Redesigning project"
+title: "REDESIGNING PROJECT"
 format: html
 editor: visual
 ---
@@ -30,6 +30,33 @@ echo = FALSE
 ```
 
 Our first redesign for the bad graph is:
+
+```{r echo = FALSE}
+suppressMessages(library(tidyr))
+transposed_1994_2004 = pivot_wider(data1994_2004, names_from = "Sex", values_from = "Value")
+grouped_1994_2004 = transposed_1994_2004 %>%
+  group_by(Year)
+grouped_1994_2004 = grouped_1994_2004 %>% 
+  rename(All.persons = 'All persons')
+```
+
+```{r echo = FALSE}
+suppressMessages(library(plotly))
+
+bar_plt_1994_2004 = plot_ly(grouped_1994_2004, x = ~Year, y = ~All.persons, type = 'bar', name = 'All persons',
+             marker = list(color = 'green')) %>% 
+    add_trace(y = ~Men, name = 'Men', 
+              marker = list(color = 'blue')) %>%
+    add_trace(y = ~Women, name = 'Women', 
+              marker = list(color = 'red')) %>%
+    layout(xaxis = list(title = "Years", tickmode='linear', tickangle = -90),
+           yaxis = list(title = "Unemployment Rate"),
+           title = 'Unemployment Rate during Ice Age \n Japan (1994-2004)',
+            barmode = 'group')
+bar_plt_1994_2004
+```
+
+The second graph is:
 ```{r echo = FALSE}
 suppressMessages(library(ggplot2))
 suppressMessages(library(plotly))
@@ -48,5 +75,91 @@ graph <- ggplot(data1994_2004, aes(x = Year, y = Value, fill = Sex, group=1,
 ggplotly(graph, tooltip = "text")
 ```
 
-```{r}
+
+The third graph is 
+```{r echo = FALSE}
+gdp_annual_1960 = read.csv("/Users/anushadusakanti/Documents/GitHub/AnushaDusakanti15.github.io/Japan_GDP_Annual_Growth.csv")
+gdp_annual_1960 = select(gdp_annual_1960, Time, Value)
+gdp_annual = slice(gdp_annual_1960, 9:63)
 ```
+
+
+```{r echo = FALSE}
+gdp_annual$Time = as.numeric(gdp_annual$Time)
+gdp_annual$Value = as.numeric(gdp_annual$Value)
+gdp_annual$Value = round(gdp_annual$Value, digits = 2)
+gdp_annual = gdp_annual %>% 
+  rename(GDP_Annual_Growth = 'Value')
+gdp_annual = gdp_annual %>% 
+  rename(Year = 'Time')
+```
+
+
+```{r echo = FALSE}
+unemployment_all_persons = subset(unemployment_rate_japan, Sex == 'All persons')
+unemployment_time_value = select(unemployment_all_persons, Year, Value)
+unemployment_time_value = unemployment_time_value %>% 
+  rename(Unemployment_Rate = 'Value')
+```
+
+
+```{r echo = FALSE}
+gdp_unemployment = merge(x = gdp_annual, y = unemployment_time_value, by = 'Year')
+```
+
+
+```{r echo = FALSE}
+line_gdp_unemp = plot_ly(gdp_unemployment, x = ~Year) %>% 
+    add_trace(y = ~GDP_Annual_Growth, name = 'GDP Annual Growth (in Percentage)', type = 'scatter', mode = 'lines') %>% 
+    add_trace(y = ~Unemployment_Rate, name = 'Unemployment Rate (in Percentage)', type = 'scatter', mode = 'lines') %>%
+    layout(xaxis = list(title = "Years", tickmode='linear', tickangle = -90),
+           yaxis = list(title = "Percentage"),
+           title = 'GDP Growth Rate vs Unemployment Rate \n Japan (1968-2022)')
+line_gdp_unemp
+```
+The map with unemployment rate of different countries
+```{r echo = FALSE}
+countries_info = subset(lfs_sexage_raw, Age == "15 to 24" & Series == "Unemployment rate" & Time == "2022" & Sex == "All persons")
+
+countries_info <- countries_info[order(countries_info$Value), ]
+
+row.names(countries_info) = NULL
+
+```
+
+
+```{r echo = FALSE}
+suppressWarnings({
+  color_scale <- colorRamp(c("red", "orange","yellow"))
+
+  min_value <- ifelse(length(countries_info$Value) > 0, min(countries_info$Value, na.rm = TRUE), NA)
+  max_value <- ifelse(length(countries_info$Value) > 0, max(countries_info$Value, na.rm = TRUE), NA)
+
+  fig <- plot_ly(countries_info,
+                 type = "scattergeo",
+                 mode = "markers",
+                 locationmode = "country names",
+                 locations = ~Country,
+                 color = ~Value,
+                 text = ~paste("Country: ", Country, "<br>UR: ", Value),
+                 colors = color_scale,
+                 marker = list(size = 10)) %>%
+    layout(title = "Unemployment rate in 2022",
+           geo = list(
+             showframe = FALSE,
+             projection = list(type = 'mercator'),
+             bgcolor = "lightblue",  
+             showcoastlines = TRUE,  
+             showland = TRUE,        
+             landcolor = "lightgreen",  
+             showocean = TRUE,       
+             oceancolor = "lightblue"  
+           ))%>%
+          colorbar(title = "Unemployment Rate",
+             tickvals = seq(min_value, max_value, length.out = 5),
+             ticktext = seq(min_value, max_value, length.out = 5))
+
+  fig
+})
+```
+
