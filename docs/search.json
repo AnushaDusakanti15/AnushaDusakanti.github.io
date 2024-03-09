@@ -32,7 +32,7 @@
     "href": "Redesign.html",
     "title": "REDESIGNING PROJECT",
     "section": "",
-    "text": "The bad graph we have taken is:\n\nOur first redesign for the bad graph is:\n\n\n\n\n\n\nThe second graph is:\n\n\n\n\n\n\nThe third graph is\n\n\n\n\n\n\nThe map with unemployment rate of different countries"
+    "text": "Below is a redesigning project on which my classmate, Sumrah Shakeel and I worked on for the Applied Statistics & Visualization for Analytics class taken at George Mason University. This project involves us finding a bad graph and redesigning it to display meaningful visualizations. The graph we selected to redesign is a line chart that shows the Unemployment Rate from 1968-2022 in Japan. The amount of information on this graph is quite a lot and the viewer can barely pinpoint the percentages mentioned here.\n\n\n\n\nVisualization 1: Grouped Bar Chart for Unemployment Rate during Ice Age (1994-2004) in Japan\n\n\n\n\n\n\n\n\nVisualization 2: Multi-line plot with facetswhere each facet represents different sexes and each line represents a trend over the Ice Age (1994-2004) in Japan\n\n\n\n\n\n\n\n\nVisualization 3: Line Chart showing Relationship between GDP Growth Rate and Unemployment Rate in Japan\n\n\n\n\n\n\n\n\nVisualization 4: World map with unemployment rate of different countries in 2022"
   },
   {
     "objectID": "Midproject.html",
