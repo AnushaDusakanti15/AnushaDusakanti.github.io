@@ -89,7 +89,8 @@ graph <- ggplot(data1993_2004, aes(x = Year, y = Value, fill = Sex, group=1,
   facet_wrap(~ Sex) +
   scale_fill_manual(values = cc) +
   labs(fill = "Population") +
-  theme_grey() 
+  theme_grey() +
+  scale_x_continuous(breaks = seq(1993, 2004, by = 1))
 
 ggplotly(graph, tooltip = "text")
 ```

@@ -71,26 +71,29 @@ bar_plt_1993_2004 = plot_ly(grouped_1993_2004, x = ~Year, y = ~All.persons, type
     add_trace(y = ~Women, name = 'Women', 
               marker = list(color = 'red')) %>%
     layout(xaxis = list(title = "Years", tickmode='linear', tickangle = -90),
-           yaxis = list(title = "Unemployment Rate"),
-           title = 'Unemployment Rate during Ice Age \n Japan (1993-2004)',
+           yaxis = list(title = "Youth Unemployment Rate (%)"),
+           title = 'Youth Unemployment Rate during Ice Age \n Japan (1993-2004)',
             barmode = 'group')
 bar_plt_1993_2004
 ```
 
-Redesigning the bar plot and creating a interactive line plot to portray the population with seperate graphs during Unemployment Ice Age
+Redesigning the bar plot and creating a interactive line plot to portray the population with separate graphs during Unemployment Ice Age
 
 ```{r}
+suppressMessages(library(ggplot2))
+suppressMessages(library(plotly))
 cc <- c("green","blue", "red")
 
 graph <- ggplot(data1993_2004, aes(x = Year, y = Value, fill = Sex, group=1,
                                   text = paste("Sex:", Sex, "<br>Year:", Year, "<br>UR:", Value))) +
   geom_line(color="black") +
   geom_point(shape = 21, size = 2.8) + 
-  labs(x = "Year", y = "Unemployment Rate", title = "Unemployment Rate in Japan") +
+  labs(x = "Year", y = "Youth Unemployment Rate(%)", title = "Youth Unemployment Rate in Japan") +
   facet_wrap(~ Sex) +
   scale_fill_manual(values = cc) +
   labs(fill = "Population") +
-  theme_grey() 
+  theme_grey() +
+  scale_x_continuous(breaks = seq(1993, 2004, by = 1))
 
 ggplotly(graph, tooltip = "text")
 ```
@@ -164,7 +167,6 @@ line_gdp_unemp = plot_ly(gdp_unemployment, x = ~Year) %>%
 line_gdp_unemp
 ```
 
-
 Creating a dataset with unemployment rate of all countries in the year 2022
 
 ```{r}
@@ -211,4 +213,3 @@ suppressWarnings({
   fig
 })
 ```
-
