@@ -194,6 +194,10 @@ suppressWarnings({
 })
 ```
 
+The video below includes Sumrah and I walking you through the designing process of selecting a bad graph and then redesigning it into 4 different meaningful and interactive visualizations.
+
+[![](https://youtu.be/ETNYB9zABSg){width="967" height="70"}](https://youtu.be/ETNYB9zABSg)
+
 #### **References:**
 
 Oecd. (n.d.). *LFS by sex and age - indicators*. Organisation for Economic Co-operation and Development. https://stats.oecd.org/Index.aspx?DataSetCode=LFS_SEXAGE_I_R#
