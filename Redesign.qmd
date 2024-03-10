@@ -196,7 +196,7 @@ suppressWarnings({
 
 The video below includes Sumrah and I walking you through the designing process of selecting a bad graph and then redesigning it into 4 different meaningful and interactive visualizations.
 
-[![](https://youtu.be/ETNYB9zABSg){width="967" height="70"}](https://youtu.be/ETNYB9zABSg)
+[![](https://img.youtube.com/vi/ETNYB9zABSg/default.jpg){width="420"}](https://www.youtube.com/watch?v=ETNYB9zABSg)
 
 #### **References:**
 
