@@ -70,7 +70,7 @@ bar_plt_1993_2004
 
 #### **Visualization 2:** Multi-line plot of different genders, during the Employment Ice Age (1993-2004) in Japan
 
-Our next redesign is a multi-line plot with facets, with each facet representing a different gender and each line representing a trend during Japan's Employment Ice Age (1993-2004). It is easy to see that the men's unemployment rate has steadily increased until 2003, whilst the women's unemployemenr rate has fluctuated.
+Our next redesign is a multi-line plot with facets, with each facet representing a different gender and each line representing a trend during Japan's Employment Ice Age (1993-2004). It is easy to see that the men's unemployment rate has steadily increased until 2003, whilst the women's unemployement rate has had short periods of decline.
 
 ##### *Strengths: Clearly distinguish between different genders; It displays trends over the years; It’s interactive*
 
