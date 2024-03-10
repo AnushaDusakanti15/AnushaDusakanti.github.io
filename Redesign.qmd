@@ -10,7 +10,11 @@ The graph we selected to redesign is a line chart that shows the Unemployment Ra
 
 ##### ![](images/Unemployment_rate_in_Japan.svg-01.png)
 
-#### **Visualization 1:** Grouped Bar Chart for Unemployment Rate during Employment Ice Age (1993-2004) in Japan
+##### *Strengths: Easy to Identify Trends*
+
+##### *Weakness: Cluttered, Overwhelming to the User, Difficult to Understand*
+
+#### **Visualization 1:** Grouped Bar Chart for Youth Unemployment Rate during Employment Ice Age (1993-2004) in Japan
 
 We redesigned the above graph as a bar chart, by considering the unemployment rate of youth(ages 15-24) during the Employment Ice Age period.
 
@@ -90,7 +94,7 @@ graph <- ggplot(data1993_2004, aes(x = Year, y = Value, fill = Sex, group=1,
 ggplotly(graph, tooltip = "text")
 ```
 
-#### **Visualization 3:** Line Chart showing Relationship between GDP Growth Rate and Unemployment Rate in Japan
+#### **Visualization 3:** Line Chart showing Relationship between GDP Growth Rate and Youth Unemployment Rate in Japan
 
 From the line chart below, it looks like the Gross Domestic Product (GDP) growth rate has slowed down over years and the negative percentage indicates the recession that Japan was hit with. Unemployment rate was initially under 5% until the early 1990s and the then it started increasing and eventually peaked in 2003 reaching almost 10.16%. After this the unemployment rate started decreasing at a steady rate.
 
@@ -135,7 +139,7 @@ line_gdp_unemp = plot_ly(gdp_unemployment, x = ~Year) %>%
 line_gdp_unemp
 ```
 
-#### **Visualization 4:** World map with unemployment rate of different countries in 2022
+#### **Visualization 4:** World map with Youth Unemployment Rate of different countries in 2022
 
 This last visualization depicts a world map showing the unemployment rates of various countries in 2022. We ranked the countries according to their unemployment rates and plotted them on a world map. The color legend ranges from red (Japan) representing the highest rated country to yellow (Greece), representing the lowest rated country.
 
