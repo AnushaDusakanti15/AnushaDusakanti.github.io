@@ -4,6 +4,12 @@ format: html
 editor: visual
 ---
 
+###### Group 19:
+
+###### Anusha Dusakanti
+
+###### Sumrah Shakeel
+
 Below is a redesigning project on which my classmate, Sumrah Shakeel and I worked on for the Applied Statistics & Visualization for Analytics (STAT515) class taken at George Mason University. This project involves us finding a bad graph and redesigning it to display meaningful visualizations.
 
 The graph we selected to redesign is a line chart that shows the Unemployment Rate from 1968-2022 in Japan. The amount of information on this graph is quite a lot and the viewer can barely pinpoint the percentages mentioned here.
