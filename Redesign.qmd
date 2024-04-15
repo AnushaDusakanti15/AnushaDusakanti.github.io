@@ -14,7 +14,7 @@ Below is a redesigning project on which my classmate, Sumrah Shakeel and I worke
 
 The graph we selected to redesign is a line chart that shows the Unemployment Rate from 1968-2022 in Japan. The amount of information on this graph is quite a lot and the viewer can barely pinpoint the percentages mentioned here.
 
-##### ![](images/Unemployment_rate_in_Japan.svg-01.png)
+![](images/Unemployment_rate_in_Japan.svg.png){width="740"}
 
 ##### *Strengths: Easy to Identify Trends*
 
