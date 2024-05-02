@@ -9,8 +9,9 @@ website:
       - href: index.qmd
         text: HOME
       - about.qmd
-      - Midproject.qmd
       - Redesign.qmd
+      - Final.qmd
+      - Finalprocodes.qmd
 
 format: 
   html: 
