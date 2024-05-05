@@ -185,9 +185,13 @@ Another modeling technique we used for predicting whether a cell was cancerous o
 
 Based on the results, it is best to include 6 variables in each split. We created a random forest model at the desired variable split.
 
-![![](images/clipboard-1885854307.png){width="579"}](images/clipboard-1805456869.png){fig-align="center" width="579"}
+![](images/clipboard-1805456869.png){fig-align="center" width="579"}
 
-The variable that is important to reduce the mean standard error (MSE) is barenuceli and the variables that were deemed the most important to include in the node splitting were uniformcellsize and uniformcellshape. Overall, the model is very good with 88.7% of the variables explained. Looking at the confusion matrix:
+The variable that is important to reduce the mean standard error (MSE) is barenuceli and the variables that were deemed the most important to include in the node splitting were uniformcellsize and uniformcellshape.
+
+![](images/clipboard-1885854307.png){fig-align="center" width="580"}
+
+Overall, the model is very good with 88.7% of the variables explained. Looking at the confusion matrix:
 
 ```         
 glm.pred   0   1

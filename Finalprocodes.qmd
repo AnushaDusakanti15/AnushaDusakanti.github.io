@@ -30,6 +30,7 @@ library(caret)})
 ```
 
 ```{r}
+hw = source('hw.R')
 url <- "https://raw.githubusercontent.com/KyleWandel/STAT-515-Final-Project/main/breast-cancer-wisconsin.csv"
 df <- read.table(url, header = TRUE, sep = ",")
 str(df)
@@ -191,6 +192,6 @@ plot(pve, xlab="Principal Component",
 
 plot(cumsum(pve), xlab="Principal Component",
      ylab="Cumulative Proportion of Variance Explained", 
-     ylim=c(0,1),type='b')
+     ylim=c(0,1),type='b') + hw
 
 ```
