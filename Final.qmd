@@ -58,36 +58,149 @@ We developed a logisitic regression model to predict if a cell was cancerous or 
 
 For the first model we used the cleaned dataset and all of the variables.
 
-Model 1-
+**Logisitic Regression Model 1-**
+
+```         
+Coefficients:
+                  Estimate Std. Error z value Pr(>|z|)    
+(Intercept)      -10.10394    1.17488  -8.600  < 2e-16 ***
+clumpthickness     0.53501    0.14202   3.767 0.000165 ***
+uniformcellsize   -0.00628    0.20908  -0.030 0.976039    
+uniformcellshape   0.32271    0.23060   1.399 0.161688    
+margadhesion       0.33064    0.12345   2.678 0.007400 ** 
+epithelial         0.09663    0.15659   0.617 0.537159    
+barenuclei         0.38303    0.09384   4.082 4.47e-05 ***
+blandchromatin     0.44719    0.17138   2.609 0.009073 ** 
+normalnucleoli     0.21303    0.11287   1.887 0.059115 .  
+mitoses            0.53484    0.32877   1.627 0.103788    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 884.35  on 682  degrees of freedom
+Residual deviance: 102.89  on 673  degrees of freedom
+AIC: 122.89
+```
 
 ![](Rplot.png){fig-align="center" width="530"}
 
 In this model the variables clumpthickness, margadhesion, barenuclei, blandchromatin were considered the only variables had a significant impact on the response variables with p-values less than 0.5. The overall model had an AIC of 122.89.
 
-Next, we wanted to create a new model after logging our variables.
+Further, we created a new model after logging our variables. For this model the variables clumpthickness and barenuclei were considered the only variables that had a significant impact on the response variables with p-values less than 0.5. The overall model had an AIC of 127.02.
 
-Model 2-
+**Logisitic Regression Model 2-**
+
+```         
+Coefficients:
+                 Estimate Std. Error z value Pr(>|z|)    
+(Intercept)      -9.31304    1.25953  -7.394 1.42e-13 ***
+clumpthickness    1.80864    0.59805   3.024  0.00249 ** 
+uniformcellsize   0.50056    0.66380   0.754  0.45080    
+uniformcellshape  1.26038    0.74379   1.695  0.09016 .  
+margadhesion      0.71750    0.39504   1.816  0.06933 .  
+epithelial       -0.04541    0.63630  -0.071  0.94310    
+barenuclei        0.36117    0.09149   3.948 7.89e-05 ***
+blandchromatin    1.49565    0.61321   2.439  0.01473 *  
+normalnucleoli    0.48867    0.35560   1.374  0.16938    
+mitoses           1.34541    0.74040   1.817  0.06920 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 884.35  on 682  degrees of freedom
+Residual deviance: 107.02  on 673  degrees of freedom
+AIC: 127.02
+
+Number of Fisher Scoring iterations: 8
+```
 
 ![](Rplot01.png){fig-align="center" width="530"}
 
-For this model the variables clumpthickness and barenuclei were considered the only variables that had a significant impact on the response variables with p-values less than .05. The overall model had an AIC of 127.02. 
+Based on the AIC of these two models, the non-logged model performed better. Then we simplified the model. 
 
-Based on the AIC of these two models, the non-logged model performed better. Now lets try and simplify the model. 
+**Logisitic Regression Model 3-**
 
-Model 3-
+```         
+Coefficients:
+                Estimate Std. Error z value Pr(>|z|)    
+(Intercept)    -10.11370    1.03264  -9.794  < 2e-16 ***
+clumpthickness   0.81166    0.12585   6.450 1.12e-10 ***
+margadhesion     0.43412    0.11403   3.807 0.000141 ***
+barenuclei       0.48136    0.08816   5.460 4.76e-08 ***
+blandchromatin   0.70154    0.15196   4.616 3.90e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 884.35  on 682  degrees of freedom
+Residual deviance: 125.77  on 678  degrees of freedom
+AIC: 135.77
+
+Number of Fisher Scoring iterations: 8
+```
 
 ![](Rplot02.png){fig-align="center" width="530"}
 
 As could be predicted, the model that included only the significant variables was worse at explaining the dataset. The complex model is definitely better than the simpler model, as demonstrated by the results of the Chisq test.
 
+```         
+Coefficients:
+   (Intercept)  clumpthickness    margadhesion      barenuclei  blandchromatin  
+      -10.1137          0.8117          0.4341          0.4814          0.7015  
+
+Degrees of Freedom: 682 Total (i.e. Null);  678 Residual
+Null Deviance:	    884.4 
+Residual Deviance: 125.8 	AIC: 135.8
+Analysis of Deviance Table
+
+Model 1: benormal ~ clumpthickness + uniformcellsize + uniformcellshape + 
+    margadhesion + epithelial + barenuclei + blandchromatin + 
+    normalnucleoli + mitoses
+Model 2: benormal ~ clumpthickness + margadhesion + barenuclei + blandchromatin
+  Resid. Df Resid. Dev Df Deviance  Pr(>Chi)    
+1       673     102.89                          
+2       678     125.78 -5  -22.886 0.0003549 ***
+```
+
 Finally, evaluating how accurate model_1 is at prediction by using confusion matrix-
 
-![](images/clipboard-1458711584.png){fig-align="left" width="236"}
+```         
+glm.pred   0   1
+       0 434  11
+       1  10 228
+```
 
 Looking at the confusion matrix this is a very good model with high predictability for both false positives and negatives. The % chance the model falsely predicted cancer when not was 10/444 (2.2%) and the chance the model falsely predicted not having cancer when there was 11/239 (4.6%).
 
 #### Decision Tree and Random Forest Modeling
 
-Another modeling type we used for trying to predict whether a cell was cancerous or not was a random forest model. One of the biggest advantages of random forests is its versatility. It can be used for both regression and classification tasks, and it's also easy to view the relative importance it assigns to the input features. One of the biggest problems in machine learning is overfitting, but most of the time this won't happen thanks to the random forest classifier. If there are enough trees in the forest, the classifier won't overfit the model.First, we looked at a decision tree model to determine the best spilt for node splitting. We did this by splitting the data into two sets, training and testing to train the model and then test its accuracy.
+Another modeling technique we used for predicting whether a cell was cancerous or not was a random forest model. One of the biggest advantages of random forests is its versatility. It can be used for both regression and classification tasks, and it's also easy to view the relative importance it assigns to the input features. One of the biggest problems in machine learning is overfitting, but most of the time this won't happen thanks to the random forest classifier. If there are enough trees in the forest, the classifier won't overfit the model.First, we looked at a decision tree model to determine the best spilt for node splitting. We did this by splitting the data into two sets, training and testing to train the model and then test its accuracy.
 
-First, we looked at a decision tree model to determine the best spilt for node splitting. We did this by splitting the data into two sets, training and testing to train the model and then test its accuracy.
+**Decision Tree Model 1-**
+
+![](images/clipboard-432770371.png){fig-align="center" width="579"}
+
+Based on the results, it is best to include 6 variables in each split. We created a random forest model at the desired variable split.
+
+![![](images/clipboard-1885854307.png){width="579"}](images/clipboard-1805456869.png){fig-align="center" width="579"}
+
+The variable that is important to reduce the mean standard error (MSE) is barenuceli and the variables that were deemed the most important to include in the node splitting were uniformcellsize and uniformcellshape. Overall, the model is very good with 88.7% of the variables explained. Looking at the confusion matrix:
+
+```         
+glm.pred   0   1
+       0 438   9
+       1   6 230
+```
+
+The percentage, the model falsely predicted cancer when not was 6/444 (1.4%) and the percentage, the model falsely predicted not having cancer when there was 9/239 (3.7%).
+
+#### Principal Component Analysis
+
+As previously indicated, while there was some correlation between our variables, none of them was statistically significant. Additionally, some of the factors did not significantly connect with response variable prediction in some of our other models. In order to explore this further, we performed a principal component analysis on the predictor variables to determine whether accuracy naturally decreases when a dataset's variable count is decreased, but not to an excessive degree.
+
+![](images/clipboard-172522986.png){fig-align="center" width="530"}
+
+![](images/clipboard-911580378.png){fig-align="center" width="579"}

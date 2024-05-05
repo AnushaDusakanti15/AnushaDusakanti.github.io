@@ -29,7 +29,6 @@ library(randomForest)
 library(caret)})
 ```
 
-
 ```{r}
 url <- "https://raw.githubusercontent.com/KyleWandel/STAT-515-Final-Project/main/breast-cancer-wisconsin.csv"
 df <- read.table(url, header = TRUE, sep = ",")
@@ -61,7 +60,6 @@ We next wanted to identify if there were any patterns amongst the predictor vari
 ```{r}
 pairs.panels(df_clean)
 ```
-
 
 For the first model we used the cleaned dataset and all of the variables.
 
@@ -156,7 +154,8 @@ glm.pred[glm.probs>.5]=1
 
 glm.pred=as.factor(glm.pred)
 df_clean$benormal=as.factor(df_clean$benormal)
-confusionMatrix(glm.pred,df_clean$benormal)
+cm1 = table(glm.pred,df_clean$benormal)
+print(cm1)
 ```
 
 The percent chance the model falsely predicted cancer when not was 6/444 (1.4%) and the chance the model falsely predicted not having cancer when there was 9/239 (3.7%).
@@ -195,4 +194,3 @@ plot(cumsum(pve), xlab="Principal Component",
      ylim=c(0,1),type='b')
 
 ```
-
