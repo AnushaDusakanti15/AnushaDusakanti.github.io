@@ -12,6 +12,8 @@ I am currently pursuing my Masters in Data Analytics Engineering at George Mason
 
 My passion to learn about data and its applications, made me choose this course for my Masters. I am confident that my proficiency in Java, Python, AWS will aid me in completing this course and I am looking forward to learn about R and using it for data visualizations.
 
-I submitted a redesign project as part of my 'Applied Statistics and Visualization for Analytics' course. Please visit the [Redesigning Project](https://anushadusakanti15.github.io/Redesign.html) page to learn more about it.
+I submitted a redesign project as part of my 'Applied Statistics and Visualization for Analytics(STAT515)' course. Please visit the [Redesigning Project](https://anushadusakanti15.github.io/Redesign.html) page to learn more about it.
+
+[Final Report](https://anushadusakanti15.github.io/FinalReport.html) webpage has final project of the course STAT515.
 
 To know about my work experience, please navigate to [Work Experience](https://anushadusakanti15.github.io/about.html).

@@ -55,7 +55,8 @@ table(df_clean$benormal)
 We next wanted to identify if there were any patterns amongst the predictor variables in the dataset. First we looked at the correlations, histrograms and scatterplots of the variables using the pairs.panel() function.
 
 ```{r}
-pairs.panels(df_clean)
+plot_title <- "Pairs Panel Plot for Breast Cancer Dataset"
+pairs.panels(df_clean,  main = plot_title)
 ```
 Principal Component Analysis
 
@@ -75,7 +76,9 @@ After running a PCA analysis found that most of the variables are grouped indica
 pr.out=prcomp(PCA_df, scale=TRUE)
 pr.out$rotation=-pr.out$rotation
 pr.out$x=-pr.out$x
-biplot(pr.out, scale=0, main = "Biplot of PCA Results", cex =0.7)
+biplot(pr.out, 
+       scale = 0, 
+       main = "Biplot of PCA Results", cex = 0.7)
 ```
 
 The following graph is the scree plot for the PCA which is used to provide a simple yet effective way to see balance and the trade-off between retaining information and reducing dimensionality in your data.
@@ -161,8 +164,19 @@ summary(tree.df_clean)
 ```
 
 ```{r}
+plot(tree.df_clean)
+title("Breast Cancer Decision Tree")
+text(tree.df_clean, pretty = 0)
+```
+
+Checking if pruning will improve them model.
+
+```{r}
 cv.df_clean=cv.tree(tree.df_clean)
-plot(cv.df_clean$size,cv.df_clean$dev,type='b')
+plot(cv.df_clean$size,cv.df_clean$dev,type='b',
+     main = "Cross-Validated Tree Performance",
+     xlab = "Uniform Cell Size", 
+     ylab = "Deviance")
 ```
 
 After pruning the tree and using 3 nodes to spilt the data below is the resulting model.
@@ -171,7 +185,7 @@ After pruning the tree and using 3 nodes to spilt the data below is the resultin
 prune.df_clean=prune.tree(tree.df_clean,best=3)
 summary(prune.df_clean)
 plot(prune.df_clean)
-title("Breast Cancer Decision Tree")
+title("Pruned Decision Tree")
 text(prune.df_clean,pretty=0)
 ```
 
@@ -182,6 +196,10 @@ Lets now use a random forest model to prevent any potential overfitting of our d
 ```{r}
 df_clean <- na.omit(df) 
 df_clean$benormal <- ifelse(df_clean$benormal == 4, 1, ifelse(df_clean$benormal == 2, 0, df_clean$benormal))
+```
+
+Creating a random forest model
+```{r}
 cancer_rf=randomForest(benormal~.,data=df_clean,subset=train,mtry=3,importance=TRUE)
 yhat.rf = predict(cancer_rf,newdata=df_clean[-train,])
 df_clean.test=df_clean[-train,"benormal"]#testing y values
@@ -191,6 +209,7 @@ mean((yhat.rf-df_clean.test)^2) #test set MSE
 By creating a random forest model we were able to reduce the MSE from .039 to .026
 
 ```{r}
+# Plotting the forest
 plot(cancer_rf, 
      main = "Random Forest Plot for Error Rate vs Trees")
 grid()
@@ -200,7 +219,7 @@ Taking a look a which variables were most important in the model.
 
 ```{r}
 plot(cancer_rf)
-varImpPlot(cancer_rf, main = "Variable Importance Plots")
+varImpPlot(cancer_rf, main = "Variable Importance Plot")
 ```
 
 Looking at the confusion matrix:
