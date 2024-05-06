@@ -9,8 +9,8 @@ website:
       - index.qmd
       - about.qmd
       - Redesign.qmd
-      - Final_KW.qmd
-      - Final_Report_Webpage.qmd
+      - FinalReport.qmd
+      - FinalWebpage.qmd
 
 format: 
   html: 

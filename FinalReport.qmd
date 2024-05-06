@@ -1,0 +1,375 @@
+---
+title: "FINAL PROJECT"
+format: html
+editor: visual
+---
+
+#### **STAT 515 Final Project**
+
+Group Number: 2
+
+Anusha Dusakanti, Kyle Wandel, Sumrah Shakeel
+
+#### **Abstract**
+
+The aim of this research is to identify patterns and indicators that could potentially predict the signs of malignant cancerous cells. Through meticulous analysis, the paper investigates various aspects, including a deep dive into the predictor variables and their relationship to each other and the response variable, the creation of various statistical models to predict cancerous cells and then finally a comparison of models to choose the best one. By scrutinizing these factors, this research hopes to make discovering breast cancer in patients easier and earlier.
+
+#### **I. Introduction**
+
+Among all cancers, breast cancer is one of the most prevalent worldwide. Even if the pharmaceutical sector has made significant investments in the search for a permanent cure for this cancer, it still raises the need for more analysis to be done on breast cancer data so that a cancerous tumor can be caught in the early stages.We intended to figure out whether distinct characteristics of the tumor cells may be used to predict the prospective appearance of breast cancer in females. With nine predictor variables and an outcome variable that would indicate whether the tumor is categorized as malignant (cancerous) or benign (non-cancerous), this dataset seemed promising.
+
+The dataset we choose to perform this research is from Dr. William Wolberg and his clinical studies from 1989 to 1991. This dataset is very well known and highly integrable due to the amount of research conducted using this data. Below is a list and description of the 9 predictor variables and the 1 response variable (benormal).
+
+-   **clumpthickness**: (1-10). Benign cells tend to be grouped in monolayers, while cancerous cells are often grouped in multilayers.
+
+-   **uniformcellsize** (1-10). Cancer cells tend to vary in size and shape.
+
+-   **uniformcellshape** (1-10). Cancer cells tend to vary in shape and size.
+
+-   **margadhesion**: (1-10). Normal cells tend to stick together, while cancer cells tend to lose this ability, so the loss of adhesion is a sign of malignancy.
+
+-   **epithelial**: (1-10). It is related to the uniformity mentioned above. Epithelial cells that are significantly enlarged may be malignant.
+
+-   **barenuclei**: (1-10). This term is used for nuclei not surrounded by cytoplasm (the rest of the cell). Those are typically seen in benign tumors.
+
+-   **blandchromatin**: (1-10). Describes a uniform "texture" of the nucleus seen in benign cells. In cancer cells, the chromatin tends to be more coarse and to form clumps.
+
+-   **normalnucleoli**: (1-10). Nucleoli are small structures seen in the nucleus. In normal cells, the nucleolus is usually very small, if visible. The nucleoli become more prominent in cancer cells, and sometimes there are multiple.
+
+-   **mitoses**: (1-10). Cancer is essentially a disease of uncontrolled mitosis.
+
+-   **benormal**: (2 or 4). Benign (non-cancerous) or malignant (cancerous) lump in a breast.
+
+The University of Wisconsin breast cancer data from William Wolberg has 699 observations and 10 variables, the first variable represents the ID of the sample and the last column "benornal" represents the classification/response variable (for benign, 4 for malignant).
+
+```         
+'data.frame':   699 obs. of  11 variables:
+ $ id              : int  1000025 1002945 1015425 1016277 1017023 1017122 1018099 1018561 1033078 1033078 ...
+ $ clumpthickness  : int  5 5 3 6 4 8 1 2 2 4 ...
+ $ uniformcellsize : int  1 4 1 8 1 10 1 1 1 2 ...
+ $ uniformcellshape: int  1 4 1 8 1 10 1 2 1 1 ...
+ $ margadhesion    : int  1 5 1 1 3 8 1 1 1 1 ...
+ $ epithelial      : int  2 7 2 3 2 7 2 2 2 2 ...
+ $ barenuclei      : chr  "1" "10" "2" "4" ...
+ $ blandchromatin  : int  3 3 3 3 3 9 3 3 1 2 ...
+ $ normalnucleoli  : int  1 2 1 7 1 7 1 1 1 1 ...
+ $ mitoses         : int  1 1 1 1 1 1 1 1 5 1 ...
+ $ benormal        : int  2 2 2 2 2 4 2 2 2 2 ...
+```
+
+Using this dataset we wanted to try and answer the following research questions:
+
+Question 1: What variables are displaying significant correlation?
+
+Question 2: How does Principal Component Analysis contribute to understanding the variance explained by principal components in our dataset?
+
+Question 3: Can a logistic regression model be created to accurately predict malignant breast cancer cells?
+
+Question 4: Can a random forest model be created to accurately predict the likelihood of a cell being malignant?
+
+To make the dataset ready for analysis we removed the ID column, checked and removed all rows with missing data changed he response variable values to malignant (4) = 1 and benign (2) = 0. After cleaning the dataset, we looked at a summary of the statistics for each variable. For our sample there are 444 records that are identified as not being malignant (=0) and 239 records that are identified as being malignant (=1).
+
+```         
+ 0   1 
+444 239 
+```
+
+We next wanted to identify if there were any patterns among the predictor variables in the dataset. First we looked at the correlations, histograms and scatter plots of the variables using the pairs.panel() function.
+
+![](WhatsApp%20Image%202024-05-05%20at%2019.05.48.jpeg){fig-align="center"}
+
+Some of the variables showed correlations to each other, but none were deemed significant by the corr.test() function. But one thing we did notice was that many of the variables exhibited a right skew with their means larger than their medians. We could potentially log() the variables to make them more uniform.
+
+#### **II. Materials and Methods**
+
+#### Principal Component Analysis
+
+As previously indicated, while there was some correlation between our variables, none of them was statistically significant. Additionally, some of the factors did not significantly connect with response variable prediction in some of our other models. In order to explore this further, we performed a principal component analysis on the predictor variables to determine whether accuracy naturally decreases when a dataset's variable count is decreased, but not to an excessive degree.
+
+We first took a look a the mean and variances of the variables in the dataset to see if the variables should be scaled or not. Below are the means an variances of the variables:
+
+```         
+Mean
+clumpthickness  uniformcellsize uniformcellshape     margadhesion 
+        4.442167         3.150805         3.215227         2.830161 
+      epithelial       barenuclei   blandchromatin   normalnucleoli 
+        3.234261         3.544656         3.445095         2.869693 
+         mitoses         benormal 
+        1.603221         1.349927 
+
+Variance
+clumpthickness  uniformcellsize uniformcellshape     margadhesion 
+       7.9566944        9.3951130        8.9316153        8.2057165 
+      epithelial       barenuclei   blandchromatin   normalnucleoli 
+       4.9421089       13.2776950        6.0010133        9.3187722 
+         mitoses         benormal 
+       3.0021597        0.2278116 
+```
+
+Based on these results the following variables exhibit some significant diversity across the dataset; clumpthickness, uniformcellsize, uniformcellshape, margadhesion, barenuclei and normalnucleoli. The following variables showed some moderate variability across the dataset; epithelial, blandchromatin, and mitoses. Because of these results it would be best to scale the variables for analysis.
+
+After running a PCA analysis found that most of the variables are grouped indicating that there are similar observations based on the variable values. There are not too many outliers to indicate any unusual observations.
+
+Looking at the bigplot mitoses has the largest contribution when looking at the variables to the corresponding principal component. All of the variables, except for mitoses are positively correlated. Most of the variables are closer to all the other variables except for mitoses, further indicating that they are strongly influenced by these corresponding variables. Looking at the axis' of the graph PC1 explains the most variance in the data as it has the longer axis than PC2.
+
+![](Rplot.png)
+
+The following graph is the scree plot for the PCA which is used to provide a simple yet effective way to see balance and the trade-off between retaining information and reducing dimensionality in your data. Looking at this graph we can easily identify that there is a large drop off-point after the first PCA, indicating that adding an additional principal component does not significantly add value at explaining the variability in the data.
+
+The following graph shows cumulative proportion of variance that each principal components adds. ![](images/clipboard-911580378.png){fig-align="center" width="579"}
+
+Looking at this graph it seems that 4 principal components would be needed to explain over 80% of the variance.
+
+The University of Wisconsin breast cancer data from William Wolberg has 699 observations and 10 variables, the first variable represents the ID of the sample and the last column "benormal" represents the classification/response variable (for benign, 4 for malignant).
+
+To make the dataset ready for analysis we removed the ID column, checked and removed all rows with missing data changed the response variable values to malignant (4) = 1 and benign (2) = 0, then looked at summary statistics for each variable. For our sample there are 444 records that are identified as not being malignant (=0) and 239 records that are identified as being malignant (=1).
+
+To identify if there were any patterns among the predictor variables in the dataset, first we looked at the correlations, histograms and scatterplots of the variables using the pairs.panel() function.
+
+Some of the variables showed correlations to each other, but none were deemed significant by the corr.test() function. We noticed many of the variables exhibited a right skew with their means larger than their medians. We could potentially log() the variables to make them more uniform.
+
+#### Logistic Regression Model
+
+We developed a logistic regression model to predict if a cell was cancerous or not. As our outcome can only be one of two things (cell is malignant or benign) we should be using a classification model and logistic regression is a simple model which is much easier to set up and train initially than other machine learning models.
+
+For the first model we used the cleaned dataset and all of the variables.
+
+**Logistic Regression Model 1-**
+
+```         
+Coefficients:
+                  Estimate Std. Error z value Pr(>|z|)    
+(Intercept)      -10.10394    1.17488  -8.600  < 2e-16 ***
+clumpthickness     0.53501    0.14202   3.767 0.000165 ***
+uniformcellsize   -0.00628    0.20908  -0.030 0.976039    
+uniformcellshape   0.32271    0.23060   1.399 0.161688    
+margadhesion       0.33064    0.12345   2.678 0.007400 ** 
+epithelial         0.09663    0.15659   0.617 0.537159    
+barenuclei         0.38303    0.09384   4.082 4.47e-05 ***
+blandchromatin     0.44719    0.17138   2.609 0.009073 ** 
+normalnucleoli     0.21303    0.11287   1.887 0.059115 .  
+mitoses            0.53484    0.32877   1.627 0.103788    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 884.35  on 682  degrees of freedom
+Residual deviance: 102.89  on 673  degrees of freedom
+AIC: 122.89
+```
+
+![](Log1.png){fig-align="center"}
+
+In this model the variables clumpthickness, margadhesion, barenuclei, blandchromatin were considered the only variables had a significant impact on the response variables with p-values less than 0.5. The overall model had an AIC of 122.89.
+
+Further, we created a new model after logging our variables. For this model the variables clumpthickness and barenuclei were considered the only variables that had a significant impact on the response variables with p-values less than 0.5. The overall model had an AIC of 127.02.
+
+**Logisitic Regression Model 2-**
+
+```         
+Coefficients:
+                 Estimate Std. Error z value Pr(>|z|)    
+(Intercept)      -9.31304    1.25953  -7.394 1.42e-13 ***
+clumpthickness    1.80864    0.59805   3.024  0.00249 ** 
+uniformcellsize   0.50056    0.66380   0.754  0.45080    
+uniformcellshape  1.26038    0.74379   1.695  0.09016 .  
+margadhesion      0.71750    0.39504   1.816  0.06933 .  
+epithelial       -0.04541    0.63630  -0.071  0.94310    
+barenuclei        0.36117    0.09149   3.948 7.89e-05 ***
+blandchromatin    1.49565    0.61321   2.439  0.01473 *  
+normalnucleoli    0.48867    0.35560   1.374  0.16938    
+mitoses           1.34541    0.74040   1.817  0.06920 .  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 884.35  on 682  degrees of freedom
+Residual deviance: 107.02  on 673  degrees of freedom
+AIC: 127.02
+
+Number of Fisher Scoring iterations: 8
+```
+
+![](log2.png)
+
+Based on the AIC of these two models, the non-logged model performed better. Then we simplified the model. 
+
+**Logisitic Regression Model 3-**
+
+```         
+Coefficients:
+                Estimate Std. Error z value Pr(>|z|)    
+(Intercept)    -10.11370    1.03264  -9.794  < 2e-16 ***
+clumpthickness   0.81166    0.12585   6.450 1.12e-10 ***
+margadhesion     0.43412    0.11403   3.807 0.000141 ***
+barenuclei       0.48136    0.08816   5.460 4.76e-08 ***
+blandchromatin   0.70154    0.15196   4.616 3.90e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 884.35  on 682  degrees of freedom
+Residual deviance: 125.77  on 678  degrees of freedom
+AIC: 135.77
+
+Number of Fisher Scoring iterations: 8
+```
+
+![](log3.png)
+
+As could be predicted, the model that included only the significant variables was worse at explaining the dataset. The complex model is definitely better than the simpler model, as demonstrated by the results of the Chisq test.
+
+```         
+Coefficients:
+   (Intercept)  clumpthickness    margadhesion      barenuclei  blandchromatin  
+      -10.1137          0.8117          0.4341          0.4814          0.7015  
+
+Degrees of Freedom: 682 Total (i.e. Null);  678 Residual
+Null Deviance:      884.4 
+Residual Deviance: 125.8    AIC: 135.8
+Analysis of Deviance Table
+
+Model 1: benormal ~ clumpthickness + uniformcellsize + uniformcellshape + 
+    margadhesion + epithelial + barenuclei + blandchromatin + 
+    normalnucleoli + mitoses
+Model 2: benormal ~ clumpthickness + margadhesion + barenuclei + blandchromatin
+  Resid. Df Resid. Dev Df Deviance  Pr(>Chi)    
+1       673     102.89                          
+2       678     125.78 -5  -22.886 0.0003549 ***
+```
+
+Finally, evaluating how accurate model_1 is at prediction by using confusion matrix-
+
+```         
+glm.pred   0   1
+       0 434  11
+       1  10 228
+```
+
+Looking at the confusion matrix this is a very good model with high predictability for both false positives and negatives. The % chance the model falsely predicted cancer when not was 10/444 (2.2%) and the chance the model falsely predicted not having cancer when there was 11/239 (4.6%).
+
+#### Decision Tree and Random Forest Modeling
+
+Another modeling technique we used for predicting whether a cell was cancerous or not was a random forest model. One of the biggest advantages of random forests is its versatility. It can be used for both regression and classification tasks, and it's also easy to view the relative importance it assigns to the input features. One of the biggest problems in machine learning is overfitting, but most of the time this won't happen thanks to the random forest classifier. If there are enough trees in the forest, the classifier won't overfit the model.First, we looked at a decision tree model to determine the best split for node splitting. We did this by splitting the data into two sets, training and testing to train the model and then test its accuracy.
+
+**Decision Tree Model 1-**
+
+For this first model we included all of the variables in the dataset.
+
+![](WhatsApp%20Image%202024-05-05%20at%2019.10.37.jpeg){fig-align="center"}
+
+```         
+Residual mean deviance:  0.025 = 8.376 / 335 
+```
+
+Based on this model alone we have a very strong model with a mean squared error (MSE) of just 0.025.
+
+We then wanted to see if we could make the model better by keeping the residual difference low by pruning the tree and finding the lowest number of nodes to create a split with. Looking at the cross-validated decision tree graph below it looks like splitting the tree using 3 nodes is best.
+
+![](WhatsApp%20Image%202024-05-05%20at%2019.16.06.jpeg){fig-align="center"}
+
+After pruning the tree and using 3 nodes to spilt the data below is the resulting model.
+
+![](WhatsApp%20Image%202024-05-05%20at%2019.24.09.jpeg)
+
+```         
+Residual mean deviance:  0.03891 = 13.15 / 338 
+```
+
+This is another strong model with a MSE of just .039. When comparing these models, their resdidual variances are very similar, as such we would likely choose the more simple model.
+
+Lets now use a random forest model to prevent any potential overfitting of our decision tree model.
+
+```         
+Call:
+ randomForest(formula = benormal ~ ., data = df_clean, mtry = 3,      importance = TRUE, subset = train) 
+               Type of random forest: regression
+                     Number of trees: 500
+No. of variables tried at each split: 3
+
+          Mean of squared residuals: 0.02729938
+                    % Var explained: 88.53
+MSE
+[1] 0.02557116
+```
+
+By creating a random forest model we were able to reduce the MSE from .039 to .026.
+
+![](Random%20Forest.png){fig-align="center"}
+
+Taking a look a which variables were most important in the model.
+
+![](WhatsApp%20Image%202024-05-05%20at%2019.38.23.jpeg)
+
+The variable that is important to reduce the mean standard error (MSE) is barenuceli and the variables that were deemed the most important to include in the node splitting were uniformcellsize and uniformcellshape.
+
+Overall, the model is very good with 88.7% of the variables explained. Looking at the confusion matrix:
+
+```         
+glm.pred   0   1
+       0 438   9
+       1   6 230
+```
+
+The percentage, the model falsely predicted cancer when not was 6/444 (1.4%) and the percentage, the model falsely predicted not having cancer when there was 9/239 (3.7%).
+
+## iii. Limitations
+
+There were no major limitations for this analysis but there were a few of things that needed to be done to the dataset in order to clean and make the dataset usable for analysis. First, we had to identify and remove all missing rows from the dataset. Second, we had to transform the response variable to be "0" and "1". Finally, many of the variables seemed to show a left skew making us question if the variables should be transformed or not. 
+
+There were only 699 samples for the dataset and although a solid number of samples, more samples would lead to a more predictable conclusion. 
+
+## iv. Conclusion
+
+It seems that a significantly accurate model to predict if a cancerous cell could be malignant using the measurements recorded in this dataset. To test this, we created multiple regression models, a random forest model, and a PCA analysis to understand the variables more thoroughly.  
+
+In the PCA test we determined that the dataset's variance could be explained by simplifying and using only 2 of the 9 predictor variables. We then created multiple logistic regression models and compared them to each other to choose the best one. After variable transformation and selection, we determined the best model would be to use all the variables. The percent chance the model falsely predicted cancer when not was 10/444 (2.2%) and the chance the model falsely predicted not having cancer when there was 11/239 (4.6%). We then decided to try and create an optimal best random forest model, starting with a best fit decision tree model. The created model resulted in an overall accuracy rate of almost 98% with the percent chance the model falsely predicted cancer when not was 6/444 (1.4%) and the chance the model falsely predicted not having cancer when there was 9/239 (3.7%). Based on the two models we created, the best model to use would be the random forest model because of its high accuracy and predictability. 
+
+## References
+
+1.  Wolberg,WIlliam. (1992). Breast Cancer Wisconsin (Original). UCI Machine Learning Repository. https://doi.org/10.24432/C5HP4Z. 
+
+2.  Grolemund, G., & Wickham, H. (2011). "Dates and Times Made Easy with lubridate." *Journal of Statistical Software*, 40(3), 1-25. \[Online\]. Available: <https://www.jstatsoft.org/v40/i03/>
+
+3.  James, G., Witten, D., Hastie, T., & Tibshirani, R. (2021). *ISLR: Data for an Introduction to Statistical Learning with Applications in R*. R package version 1.4. \[Online\]. Available: [https://CRAN.R-project.org/package=ISLR](https://cran.r-project.org/package=ISLR)
+
+4.  Kuhn, M. (2008). "Building Predictive Models in R Using the caret Package." *Journal of Statistical Software*, 28(5), 1--26. doi:10.18637/jss.v028.i05 \[Online\]. Available: <https://doi.org/10.18637/jss.v028.i05>
+
+5.  Liaw, A., & Wiener, M. (2002). "Classification and Regression by randomForest." *R News*, 2(3), 18-22. \[Online\]. Available: [https://CRAN.R-project.org/doc/Rnews/](https://cran.r-project.org/doc/Rnews/)
+
+6.  Makowski, D., Lüdecke, D., Patil, I., Thériault, R., Ben-Shachar, M., & Wiernik, B. (2023). "Automated Results Reporting as a Practical Tool to Improve Reproducibility and Methodological Best Practices Adoption." *CRAN*. \[Online\]. Available: <https://easystats.github.io/report/>
+
+7.  Miller, T. (2020). *leaps: Regression Subset Selection*. R package version 3.1. \[Online\]. Available: [https://CRAN.R-project.org/package=leaps](https://cran.r-project.org/package=leaps)
+
+8.  Müller, K., & Wickham, H. (2023). *tibble: Simple Data Frames*. R package version 3.2.1. \[Online\]. Available: [https://CRAN.R-project.org/package=tibble](https://cran.r-project.org/package=tibble)
+
+9.  R Core Team (2023). *R: A Language and Environment for Statistical Computing*. R Foundation for Statistical Computing, Vienna, Austria. \[Online\]. Available: [https://www.R-project.org/](https://www.r-project.org/)
+
+10. Ripley, B. (2023). *tree: Classification and Regression Trees*. R package version 1.0-43. \[Online\]. Available: [https://CRAN.R-project.org/package=tree](https://cran.r-project.org/package=tree)
+
+11. Sarkar, D. (2008). *Lattice: Multivariate Data Visualization with R*. Springer, New York. ISBN 978-0-387-75968-5. \[Online\]. Available: [http://lmdvr.r-forge.r-project.org](http://lmdvr.r-forge.r-project.org/)
+
+12. Sievert, C. (2020). *Interactive Web-Based Data Visualization with R, plotly, and shiny*. Chapman and Hall/CRC. ISBN 9781138331457. \[Online\]. Available: [https://plotly-r.com](https://plotly-r.com/)
+
+13. Wickham, H. (2007). "Reshaping Data with the reshape Package." *Journal of Statistical Software*, 21(12), 1-20. \[Online\]. Available: <http://www.jstatsoft.org/v21/i12/>
+
+14. Wickham, H. (2016). *ggplot2: Elegant Graphics for Data Analysis*. Springer-Verlag New York. ISBN 978-3-319-24277-4. \[Online\]. Available: [https://ggplot2.tidyverse.org](https://ggplot2.tidyverse.org/)
+
+15. Wickham, H. (2022). *stringr: Simple, Consistent Wrappers for Common String Operations*. R package version 1.5.0. \[Online\]. Available: [https://CRAN.R-project.org/package=stringr](https://cran.r-project.org/package=stringr)
+
+16. Wickham, H. (2023). *forcats: Tools for Working with Categorical Variables (Factors)*. R package version 1.0.0. \[Online\]. Available: [https://CRAN.R-project.org/package=forcats](https://cran.r-project.org/package=forcats)
+
+17. Wickham, H., et al. (2019). "Welcome to the tidyverse." *Journal of Open Source Software*, 4(43), 1686. doi:10.21105/joss.01686 \[Online\]. Available: <https://doi.org/10.21105/joss.01686>
+
+18. Wickham, H., François, R., Henry, L., Müller, K., & Vaughan, D. (2023). *dplyr: A Grammar of Data Manipulation*. R package version 1.1.3. \[Online\]. Available: [https://CRAN.R-project.org/package=dplyr](https://cran.r-project.org/package=dplyr)
+
+19. Wickham, H., & Henry, L. (2023). *purrr: Functional Programming Tools*. R package version 1.0.2. \[Online\]. Available: [https://CRAN.R-project.org/package=purrr](https://cran.r-project.org/package=purrr)
+
+20. Wickham, H., Hester, J., & Bryan, J. (2023). *readr: Read Rectangular Text Data*. R package version 2.1.4. \[Online\]. Available: [https://CRAN.R-project.org/package=readr](https://cran.r-project.org/package=readr)
+
+21. Wickham, H., Vaughan, D., & Girlich, M. (2023). *tidyr: Tidy Messy Data*. R package version 1.3.0. \[Online\]. Available: [https://CRAN.R-project.org/package=tidyr](https://cran.r-project.org/package=tidyr)
+
+22. Revelle, W. (2024). *psych: Procedures for Psychological, Psychometric, and Personality Research*. Northwestern University, Evanston, Illinois. R package version 2.4.3. \[Online\]. Available: [https://CRAN.R-project.org/package=psych](https://cran.r-project.org/package=psych)
