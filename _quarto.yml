@@ -10,8 +10,8 @@ website:
         text: HOME
       - about.qmd
       - Redesign.qmd
-      - Final.qmd
-      - Finalprocodes.qmd
+      - Final_KW.qmd
+      - Final_Report_Webpage.qmd
 
 format: 
   html: 

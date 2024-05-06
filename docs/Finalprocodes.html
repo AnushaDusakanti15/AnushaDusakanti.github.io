@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Welcome! - FINAL PROJECT CODE</title>
+<title>STAT 515 Mid Project - FINAL PROJECT CODE</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -95,9 +95,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -105,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Welcome!</span>
+    <span class="navbar-title">STAT 515 Mid Project</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -116,23 +117,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">HOME</span></a>
+ <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">WORK EXPERIENCE</span></a>
+    <a class="nav-link" href="./original_graph.qmd" rel="" target="">
+ <span class="menu-text">Original Graph</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Redesign.html" rel="" target="">
- <span class="menu-text">REDESIGNING PROJECT</span></a>
+    <a class="nav-link" href="./new_graphs.qmd" rel="" target="">
+ <span class="menu-text">Redesigned Visuals</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Final.html" rel="" target="">
- <span class="menu-text">FINAL PROJECT</span></a>
+    <a class="nav-link" href="./video.qmd" rel="" target="">
+ <span class="menu-text">Oral Presentation</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./Finalprocodes.html" rel="" target="" aria-current="page">
- <span class="menu-text">FINAL PROJECT CODE</span></a>
+    <a class="nav-link" href="./Final_KW.html" rel="" target="">
+ <span class="menu-text">Final Project</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Final_Report_Webpage.html" rel="" target="">
+ <span class="menu-text">Code For Final Project</span></a>
   </li>  
 </ul>
             <div class="quarto-navbar-tools ms-auto">
@@ -145,7 +150,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#decision-tree-and-random-forest-modeling" id="toc-decision-tree-and-random-forest-modeling" class="nav-link active" data-scroll-target="#decision-tree-and-random-forest-modeling">Decision Tree and Random Forest Modeling</a></li>
+  <li><a href="#principal-component-analysis" id="toc-principal-component-analysis" class="nav-link" data-scroll-target="#principal-component-analysis">Principal Component Analysis</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -514,35 +528,13 @@ No. of variables tried at each split: 6
 <span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>glm.pred<span class="ot">=</span><span class="fu">as.factor</span>(glm.pred)</span>
 <span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>df_clean<span class="sc">$</span>benormal<span class="ot">=</span><span class="fu">as.factor</span>(df_clean<span class="sc">$</span>benormal)</span>
-<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a><span class="fu">confusionMatrix</span>(glm.pred,df_clean<span class="sc">$</span>benormal)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>cm1 <span class="ot">=</span> <span class="fu">table</span>(glm.pred,df_clean<span class="sc">$</span>benormal)</span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(cm1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Confusion Matrix and Statistics
-
-          Reference
-Prediction   0   1
-         0 438   9
-         1   6 230
-                                         
-               Accuracy : 0.978          
-                 95% CI : (0.964, 0.9877)
-    No Information Rate : 0.6501         
-    P-Value [Acc &gt; NIR] : &lt;2e-16         
-                                         
-                  Kappa : 0.9516         
-                                         
- Mcnemar's Test P-Value : 0.6056         
-                                         
-            Sensitivity : 0.9865         
-            Specificity : 0.9623         
-         Pos Pred Value : 0.9799         
-         Neg Pred Value : 0.9746         
-             Prevalence : 0.6501         
-         Detection Rate : 0.6413         
-   Detection Prevalence : 0.6545         
-      Balanced Accuracy : 0.9744         
-                                         
-       'Positive' Class : 0              
-                                         </code></pre>
+<pre><code>        
+glm.pred   0   1
+       0 438   9
+       1   6 230</code></pre>
 </div>
 </div>
 <p>The percent chance the model falsely predicted cancer when not was 6/444 (1.4%) and the chance the model falsely predicted not having cancer when there was 9/239 (3.7%).</p>

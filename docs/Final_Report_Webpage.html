@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Welcome! - FINAL PROJECT CODE</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Welcome!</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">HOME</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html" rel="" target="">
+ <span class="menu-text">WORK EXPERIENCE</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Redesign.html" rel="" target="">
+ <span class="menu-text">REDESIGNING PROJECT</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Final_KW.html" rel="" target="">
+ <span class="menu-text">FINAL PROJECT</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./Final_Report_Webpage.html" rel="" target="" aria-current="page">
+ <span class="menu-text">FINAL PROJECT CODE</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">FINAL PROJECT CODE</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>For the final project for our STAT 515 class, we were asked to find a dataset and perform a robust advanced analysis on the data. For this project we chose to use breast cancer screening data from the University of Wisconsin [1].This study aims to identify patterns and indicators that could potentially predict the signs of malignant cancerous cells. Through meticulous analysis, the paper investigates various aspects, including a deep dive into the predictor variables and their relationship to each other and the response variable, the creation of various statistical models to predict cancerous cells and then finally a comparison of models to choose the best one. By scrutinizing these factors, this research hopes to make discovering breast cancer in patients easier and earlier.</p>
+</section>
+<section id="i.-introduction" class="level2">
+<h2 class="anchored" data-anchor-id="i.-introduction">i. Introduction</h2>
+<p>Breast cancer is one of the most common cancers in the world. While the pharmaceutical industry has invested quite a bit in trying to find a definitive cure to this cancer, it still raises the need for more analysis to be done on breast cancer data so that a cancerous tumor can be caught in the early stages. We wanted to see if it was possible to identify the potential emergence of breast cancer in women based on different features of the tumor cells. This dataset seemed like a good fit since it has 9 predictor variables, and the outcome variable would indicate whether the tumor can be classified as malignant (cancerous) or benign (non-cancerous).&nbsp;</p>
+<p>The dataset we choose to perform this research is from Dr.&nbsp;William Wolberg and his clinical studies from 1989 to 1991. This dataset is very well known and highly integrable due to the amount of research conducted using this data. Below is a list and description of the 9 predictor variables and the 1 response variable (benormal).&nbsp;&nbsp;</p>
+<ul>
+<li><p><strong>clumpthickness</strong>: (1-10). Benign cells tend to be grouped in monolayers, while cancerous cells are often grouped in multilayers.</p></li>
+<li><p><strong>uniformcellsize</strong> (1-10). Cancer cells tend to vary in size and shape.&nbsp;</p></li>
+<li><p><strong>uniformcellshape</strong> (1-10). Cancer cells tend to vary in shape and size.&nbsp;</p></li>
+<li><p><strong>margadhesion</strong>: (1-10). Normal cells tend to stick together, while cancer cells tend to lose this ability, so the loss of adhesion is a sign of malignancy.&nbsp;</p></li>
+<li><p><strong>epithelial</strong>: (1-10). It is related to the uniformity mentioned above. Epithelial cells that are significantly enlarged may be malignant.&nbsp;</p></li>
+<li><p><strong>barenuclei</strong>: (1-10). This term is used for nuclei not surrounded by cytoplasm (the rest of the cell). Those are typically seen in benign tumors.&nbsp;</p></li>
+<li><p><strong>blandchromatin</strong>: (1-10). Describes a uniform “texture” of the nucleus seen in benign cells. In cancer cells, the chromatin tends to be more coarse and to form clumps.&nbsp;</p></li>
+<li><p><strong>normalnucleoli</strong>: (1-10). Nucleoli are small structures seen in the nucleus. In normal cells, the nucleolus is usually very small, if visible. The nucleoli become more prominent in cancer cells, and sometimes there are multiple.&nbsp;</p></li>
+<li><p><strong>mitoses</strong>: (1-10). Cancer is essentially a disease of uncontrolled mitosis.&nbsp;</p></li>
+<li><p><strong>benormal</strong>: (2 or 4). Benign (non-cancerous) or malignant (cancerous) lump in a breast.&nbsp;ii. Materials and Methods</p></li>
+</ul>
+<p>The University of Wisconsin breast cancer data from William Wolberg has 699 observations and 10 variables, the first variable represents the ID of the sample and the last column “benornal” represents the classification/response variable (for benign, 4 for malignant).</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   699 obs. of  11 variables:
+ $ id              : int  1000025 1002945 1015425 1016277 1017023 1017122 1018099 1018561 1033078 1033078 ...
+ $ clumpthickness  : int  5 5 3 6 4 8 1 2 2 4 ...
+ $ uniformcellsize : int  1 4 1 8 1 10 1 1 1 2 ...
+ $ uniformcellshape: int  1 4 1 8 1 10 1 2 1 1 ...
+ $ margadhesion    : int  1 5 1 1 3 8 1 1 1 1 ...
+ $ epithelial      : int  2 7 2 3 2 7 2 2 2 2 ...
+ $ barenuclei      : chr  "1" "10" "2" "4" ...
+ $ blandchromatin  : int  3 3 3 3 3 9 3 3 1 2 ...
+ $ normalnucleoli  : int  1 2 1 7 1 7 1 1 1 1 ...
+ $ mitoses         : int  1 1 1 1 1 1 1 1 5 1 ...
+ $ benormal        : int  2 2 2 2 2 4 2 2 2 2 ...</code></pre>
+</div>
+</div>
+<p>Using this dataset we wanted to try and answer the following research questions:</p>
+<p>Question 1: What are the variables displaying significant correlation?</p>
+<p>Question 2: How does Principal Component Analysis contribute to understanding the variance explained by principal components in our dataset?</p>
+<p>Question 3: Can a logistic regression model be created to accurately predict malignant breast cancer cells?</p>
+<p>Question 4: Can a random forest model be created to accurately predict the likelihood of a cell being malignant?</p>
+<p>To make the dataset ready for analysis we removed the ID column, checked and removed all rows with missing data changed he response variable values to malignant (4) = 1 and benign (2) = 0.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: NAs introduced by coercion</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  clumpthickness  uniformcellsize uniformcellshape     margadhesion 
+               0                0                0                0 
+      epithelial       barenuclei   blandchromatin   normalnucleoli 
+               0               16                0                0 
+         mitoses         benormal 
+               0                0 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   683 obs. of  10 variables:
+ $ clumpthickness  : int  5 5 3 6 4 8 1 2 2 4 ...
+ $ uniformcellsize : int  1 4 1 8 1 10 1 1 1 2 ...
+ $ uniformcellshape: int  1 4 1 8 1 10 1 2 1 1 ...
+ $ margadhesion    : int  1 5 1 1 3 8 1 1 1 1 ...
+ $ epithelial      : int  2 7 2 3 2 7 2 2 2 2 ...
+ $ barenuclei      : int  1 10 2 4 1 10 10 1 1 1 ...
+ $ blandchromatin  : int  3 3 3 3 3 9 3 3 1 2 ...
+ $ normalnucleoli  : int  1 2 1 7 1 7 1 1 1 1 ...
+ $ mitoses         : int  1 1 1 1 1 1 1 1 5 1 ...
+ $ benormal        : int  2 2 2 2 2 4 2 2 2 2 ...
+ - attr(*, "na.action")= 'omit' Named int [1:16] 24 41 140 146 159 165 236 250 276 293 ...
+  ..- attr(*, "names")= chr [1:16] "24" "41" "140" "146" ...</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code> clumpthickness   uniformcellsize  uniformcellshape  margadhesion  
+ Min.   : 1.000   Min.   : 1.000   Min.   : 1.000   Min.   : 1.00  
+ 1st Qu.: 2.000   1st Qu.: 1.000   1st Qu.: 1.000   1st Qu.: 1.00  
+ Median : 4.000   Median : 1.000   Median : 1.000   Median : 1.00  
+ Mean   : 4.442   Mean   : 3.151   Mean   : 3.215   Mean   : 2.83  
+ 3rd Qu.: 6.000   3rd Qu.: 5.000   3rd Qu.: 5.000   3rd Qu.: 4.00  
+ Max.   :10.000   Max.   :10.000   Max.   :10.000   Max.   :10.00  
+   epithelial       barenuclei     blandchromatin   normalnucleoli 
+ Min.   : 1.000   Min.   : 1.000   Min.   : 1.000   Min.   : 1.00  
+ 1st Qu.: 2.000   1st Qu.: 1.000   1st Qu.: 2.000   1st Qu.: 1.00  
+ Median : 2.000   Median : 1.000   Median : 3.000   Median : 1.00  
+ Mean   : 3.234   Mean   : 3.545   Mean   : 3.445   Mean   : 2.87  
+ 3rd Qu.: 4.000   3rd Qu.: 6.000   3rd Qu.: 5.000   3rd Qu.: 4.00  
+ Max.   :10.000   Max.   :10.000   Max.   :10.000   Max.   :10.00  
+    mitoses          benormal     
+ Min.   : 1.000   Min.   :0.0000  
+ 1st Qu.: 1.000   1st Qu.:0.0000  
+ Median : 1.000   Median :0.0000  
+ Mean   : 1.603   Mean   :0.3499  
+ 3rd Qu.: 1.000   3rd Qu.:1.0000  
+ Max.   :10.000   Max.   :1.0000  </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+  0   1 
+444 239 </code></pre>
+</div>
+</div>
+<p>After cleaning the dataset, we looked at a summary of the statistics for each variable. For our sample there are 444 records that are identified as not being malignant (=0) and 239 records that are identified as being malignant (=1).</p>
+<p>We next wanted to identify if there were any patterns amongst the predictor variables in the dataset. First we looked at the correlations, histrograms and scatterplots of the variables using the pairs.panel() function.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Final_Report_Webpage_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Some of the variables showed correlations to each other, but none were deemed significant by the corr.test() function. But one thing we did notice was that many of the variables exhibited a right skew with their means larger than their medians. We could potentially log() the variables to make them more uniform.</p>
+</section>
+<section id="ii.-materials-and-methods" class="level2">
+<h2 class="anchored" data-anchor-id="ii.-materials-and-methods">ii. Materials and Methods</h2>
+<section id="principal-component-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="principal-component-analysis">Principal Component Analysis</h3>
+<p>We mentioned earlier that some of our variables were correlated but none were significantly correlated to each other. Also, in some of our other models, some of the variables were not significantly correlated to predicting the response variable. To examine this further, we did a principal component analysis on the predictor variables too see if reducing the number of variables of a data set naturally comes at the expense of accuracy while not losing too much accuracy.</p>
+<p>We first took a look a the mean and variances of the variables in the dataset to see if the variables should be scaled or not. Below are the means an variances of the variables:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>  clumpthickness  uniformcellsize uniformcellshape     margadhesion 
+        4.442167         3.150805         3.215227         2.830161 
+      epithelial       barenuclei   blandchromatin   normalnucleoli 
+        3.234261         3.544656         3.445095         2.869693 
+         mitoses 
+        1.603221 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  clumpthickness  uniformcellsize uniformcellshape     margadhesion 
+        7.956694         9.395113         8.931615         8.205717 
+      epithelial       barenuclei   blandchromatin   normalnucleoli 
+        4.942109        13.277695         6.001013         9.318772 
+         mitoses 
+        3.002160 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  clumpthickness  uniformcellsize uniformcellshape     margadhesion 
+        2.820761         3.065145         2.988581         2.864562 
+      epithelial       barenuclei   blandchromatin   normalnucleoli 
+        2.223085         3.643857         2.449697         3.052666 
+         mitoses 
+        1.732674 </code></pre>
+</div>
+</div>
+<p>Based on these results the following variables exhibit some significant diversity across the dataset; clumpthickness, uniformcellsize, uniformcellshape, margadhesion, barenuclei and normalnucleoli. The following variables showed some moderate variability across the dataset; epithelial, blandchromatin, and mitoses. Because of these results it would be best to scale the variables for analysis.</p>
+<p>After running a PCA analysis found that most of the variables are grouped indicating that there are similar observations based on the variable values. There are not too many outliers to indicate any unusual observations.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Final_Report_Webpage_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Looking at the bigplot mitoses has the largest contribution when looking at the variables to the corresponding principal component. All of the variables, except for mitoses are positively correlated. Most of the variables are closer to all the other variables except for mitoses, further indicating that they are strongly influenced by these corresponding variables. Looking at the axis’ of the graph PC1 explains the most variance in the data as it has the longer axis than PC2.</p>
+<p>The following graph is the scree plot for the PCA which is used to provide a simple yet effective way to see balance and the trade-off between retaining information and reducing dimensionality in your data.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5.89949935 0.77594689 0.53925224 0.45962745 0.38027583 0.30187645 0.29440271
+[8] 0.26073586 0.08838322</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.655499928 0.086216321 0.059916916 0.051069717 0.042252870 0.033541828
+[7] 0.032711413 0.028970651 0.009820358</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Final_Report_Webpage_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Looking at this graph we can easily identify that there is a large drop off-point after the first PCA, indicating that adding an additional principal component does not significantly add value at explaining the variability in the data.</p>
+<p>The following graph shows cumulative proportion of variance that each principal components adds.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Final_Report_Webpage_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Looking at this graph it seems that 4 principal components would be needed to explain over 80% of the variance.</p>
+</section>
+<section id="logistic-regression-model" class="level3">
+<h3 class="anchored" data-anchor-id="logistic-regression-model">Logistic Regression Model</h3>
+<p>We decided to develop a Logistic regression model to see if we could develop a model that could be used to predict if a cell was cancerous or not. Because our outcome can only be one of two things (cell is malignant or benign) we should be using a classification model and logistic regression is a simple model which is much easier to set up and train initially than other machine learning models.</p>
+<p>For the first model we used the cleaned dataset and all of the variables.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = benormal ~ ., family = binomial, data = df_clean)
+
+Coefficients:
+                  Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)      -10.10394    1.17488  -8.600  &lt; 2e-16 ***
+clumpthickness     0.53501    0.14202   3.767 0.000165 ***
+uniformcellsize   -0.00628    0.20908  -0.030 0.976039    
+uniformcellshape   0.32271    0.23060   1.399 0.161688    
+margadhesion       0.33064    0.12345   2.678 0.007400 ** 
+epithelial         0.09663    0.15659   0.617 0.537159    
+barenuclei         0.38303    0.09384   4.082 4.47e-05 ***
+blandchromatin     0.44719    0.17138   2.609 0.009073 ** 
+normalnucleoli     0.21303    0.11287   1.887 0.059115 .  
+mitoses            0.53484    0.32877   1.627 0.103788    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 884.35  on 682  degrees of freedom
+Residual deviance: 102.89  on 673  degrees of freedom
+AIC: 122.89
+
+Number of Fisher Scoring iterations: 8</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:  glm(formula = benormal ~ ., family = binomial, data = df_clean)
+
+Coefficients:
+     (Intercept)    clumpthickness   uniformcellsize  uniformcellshape  
+       -10.10394           0.53501          -0.00628           0.32271  
+    margadhesion        epithelial        barenuclei    blandchromatin  
+         0.33064           0.09664           0.38302           0.44719  
+  normalnucleoli           mitoses  
+         0.21303           0.53484  
+
+Degrees of Freedom: 682 Total (i.e. Null);  673 Residual
+Null Deviance:      884.4 
+Residual Deviance: 102.9    AIC: 122.9</code></pre>
+</div>
+</div>
+<p>In this model the variables clumpthickness, margadhesion, barenuclei, blandchromatin were considered the only variables had a significant impact on the response variables with p-values less than .05. The overall model had an AIC of 122.89.</p>
+<p>Next, we wanted to create a new model after logging our variables.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = benormal ~ ., family = binomial, data = df_log)
+
+Coefficients:
+                 Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)      -9.31304    1.25953  -7.394 1.42e-13 ***
+clumpthickness    1.80864    0.59805   3.024  0.00249 ** 
+uniformcellsize   0.50056    0.66380   0.754  0.45080    
+uniformcellshape  1.26038    0.74379   1.695  0.09016 .  
+margadhesion      0.71750    0.39504   1.816  0.06933 .  
+epithelial       -0.04541    0.63630  -0.071  0.94310    
+barenuclei        0.36117    0.09149   3.948 7.89e-05 ***
+blandchromatin    1.49565    0.61321   2.439  0.01473 *  
+normalnucleoli    0.48867    0.35560   1.374  0.16938    
+mitoses           1.34541    0.74040   1.817  0.06920 .  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 884.35  on 682  degrees of freedom
+Residual deviance: 107.02  on 673  degrees of freedom
+AIC: 127.02
+
+Number of Fisher Scoring iterations: 8</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:  glm(formula = benormal ~ ., family = binomial, data = df_log)
+
+Coefficients:
+     (Intercept)    clumpthickness   uniformcellsize  uniformcellshape  
+        -9.31304           1.80864           0.50056           1.26038  
+    margadhesion        epithelial        barenuclei    blandchromatin  
+         0.71750          -0.04541           0.36117           1.49565  
+  normalnucleoli           mitoses  
+         0.48867           1.34541  
+
+Degrees of Freedom: 682 Total (i.e. Null);  673 Residual
+Null Deviance:      884.4 
+Residual Deviance: 107  AIC: 127</code></pre>
+</div>
+</div>
+<p>For this model the variables clumpthickness and barenuclei were considered the only variables had a significant impact on the response variables with p-values less than .05. The overall model had an AIC of 127.02.</p>
+<p>Based on the AIC of these two models, the non-logged model performed better. Now lets try and simplify the model.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = benormal ~ clumpthickness + margadhesion + barenuclei + 
+    blandchromatin, family = binomial, data = df_clean)
+
+Coefficients:
+                Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)    -10.11370    1.03264  -9.794  &lt; 2e-16 ***
+clumpthickness   0.81166    0.12585   6.450 1.12e-10 ***
+margadhesion     0.43412    0.11403   3.807 0.000141 ***
+barenuclei       0.48136    0.08816   5.460 4.76e-08 ***
+blandchromatin   0.70154    0.15196   4.616 3.90e-06 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 884.35  on 682  degrees of freedom
+Residual deviance: 125.77  on 678  degrees of freedom
+AIC: 135.77
+
+Number of Fisher Scoring iterations: 8</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:  glm(formula = benormal ~ clumpthickness + margadhesion + barenuclei + 
+    blandchromatin, family = binomial, data = df_clean)
+
+Coefficients:
+   (Intercept)  clumpthickness    margadhesion      barenuclei  blandchromatin  
+      -10.1137          0.8117          0.4341          0.4814          0.7015  
+
+Degrees of Freedom: 682 Total (i.e. Null);  678 Residual
+Null Deviance:      884.4 
+Residual Deviance: 125.8    AIC: 135.8</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Analysis of Deviance Table
+
+Model 1: benormal ~ clumpthickness + uniformcellsize + uniformcellshape + 
+    margadhesion + epithelial + barenuclei + blandchromatin + 
+    normalnucleoli + mitoses
+Model 2: benormal ~ clumpthickness + margadhesion + barenuclei + blandchromatin
+  Resid. Df Resid. Dev Df Deviance  Pr(&gt;Chi)    
+1       673     102.89                          
+2       678     125.78 -5  -22.886 0.0003549 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
+</div>
+</div>
+<p>As should be expected, creating a model using only the significant variables was worse at explaining the dataset. Using the Chisq test, we can also conclude that the more complex model is significantly better than the simpler model.</p>
+<p>Using model_1 as the final model, lets see how accurate it is for prediction.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>          1           2           3           4           5           6 
+0.016046581 0.908808622 0.008137623 0.760934919 0.018166848 0.999973622 
+          7           8           9          10 
+0.056844170 0.004503358 0.011249056 0.006032371 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Confusion Matrix and Statistics
+
+          Reference
+Prediction   0   1
+         0 434  11
+         1  10 228
+                                          
+               Accuracy : 0.9693          
+                 95% CI : (0.9534, 0.9809)
+    No Information Rate : 0.6501          
+    P-Value [Acc &gt; NIR] : &lt;2e-16          
+                                          
+                  Kappa : 0.9324          
+                                          
+ Mcnemar's Test P-Value : 1               
+                                          
+            Sensitivity : 0.9775          
+            Specificity : 0.9540          
+         Pos Pred Value : 0.9753          
+         Neg Pred Value : 0.9580          
+             Prevalence : 0.6501          
+         Detection Rate : 0.6354          
+   Detection Prevalence : 0.6515          
+      Balanced Accuracy : 0.9657          
+                                          
+       'Positive' Class : 0               
+                                          </code></pre>
+</div>
+</div>
+<p>Looking at the confusion matrix this is a very good model with high predictability for both false positives and negatives. The % chance the model falsely predicted cancer when not was 10/444 (2.2%) and the chance the model falsely predicted not having cancer when there was 11/239 (4.6%).</p>
+</section>
+<section id="decision-tree-and-random-forest-modeling" class="level3">
+<h3 class="anchored" data-anchor-id="decision-tree-and-random-forest-modeling">Decision Tree and Random Forest Modeling</h3>
+<p>Another modeling technique we used for predicting whether a cell was cancerous or not was a random forest model. One of the biggest advantages of random forests is its versatility. It can be used for both regression and classification tasks, and it’s also easy to view the relative importance it assigns to the input features. One of the biggest problems in machine learning is overfitting, but most of the time this won’t happen thanks to the random forest classifier. If there are enough trees in the forest, the classifier won’t overfit the model.</p>
+<p>First, we looked at a decision tree model to determine the best spilt for node splitting. We did this by splitting the data into two sets, training and testing to train the model and then test its accuracy.</p>
+<p>For this first model we included all of the variables in the dataset.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Final_Report_Webpage_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Regression tree:
+tree(formula = benormal ~ ., data = df_clean, subset = train)
+Variables actually used in tree construction:
+[1] "uniformcellshape" "clumpthickness"   "barenuclei"       "epithelial"      
+Number of terminal nodes:  5 
+Residual mean deviance:  0.02505 = 8.416 / 336 
+Distribution of residuals:
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+-0.95240 -0.00495 -0.00495  0.00000  0.04762  0.99500 </code></pre>
+</div>
+</div>
+<p>Based on this model alone we have a very strong model with a mean squared error (MSE) of just .025.</p>
+<p>We then wanted to see if we could make the model better by keeping the residual difference low by pruning the tree and finding the lowest number of nodes to create a split with. Looking at the cross-validated decision tree graph below it looks like splitting the tree using 3 nodes is best.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Final_Report_Webpage_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>After pruning the tree and using 3 nodes to spilt the data below is the resulting model.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Regression tree:
+snip.tree(tree = tree.df_clean, nodes = c(2L, 6L))
+Variables actually used in tree construction:
+[1] "uniformcellshape" "barenuclei"      
+Number of terminal nodes:  3 
+Residual mean deviance:  0.04432 = 14.98 / 338 
+Distribution of residuals:
+    Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
+-0.95240 -0.01914 -0.01914  0.00000  0.04762  0.98090 </code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Final_Report_Webpage_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>This is another strong model with a MSE of just .039. When comparing these models, their resdidual variances are very similar, as such we would likely choose the more simple model.</p>
+<p>Lets now use a random forest model to prevent any potential overfitting of our decision tree model.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in randomForest.default(m, y, ...): The response has five or fewer
+unique values.  Are you sure you want to do regression?</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.02856504</code></pre>
+</div>
+</div>
+<p>By creating a random forest model we were able to reduce the MSE from .039 to .026</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Final_Report_Webpage_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Taking a look a which variables were most important in the model.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Final_Report_Webpage_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid" width="672"></p>
+</div>
+<div class="cell-output-display">
+<p><img src="Final_Report_Webpage_files/figure-html/unnamed-chunk-18-2.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>The variable that is most important to reduce the mean standard error (MSE) is barenuceli and the variables that were deemed the most important to include in the node splitting were uniformcellsize and uniformcellshape. Overall, the model is very good with 88.7% of the variables explained. Looking at the confusion matrix:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>            1             2             3             4             5 
+-6.231682e-16  7.668333e-01 -6.217249e-16  3.937667e-01  1.412692e-02 
+            6             7             8             9            10 
+ 9.996000e-01  2.192000e-01 -6.310508e-16  1.061333e-01  7.692308e-05 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Confusion Matrix and Statistics
+
+          Reference
+Prediction   0   1
+         0 438  10
+         1   6 229
+                                          
+               Accuracy : 0.9766          
+                 95% CI : (0.9622, 0.9866)
+    No Information Rate : 0.6501          
+    P-Value [Acc &gt; NIR] : &lt;2e-16          
+                                          
+                  Kappa : 0.9483          
+                                          
+ Mcnemar's Test P-Value : 0.4533          
+                                          
+            Sensitivity : 0.9865          
+            Specificity : 0.9582          
+         Pos Pred Value : 0.9777          
+         Neg Pred Value : 0.9745          
+             Prevalence : 0.6501          
+         Detection Rate : 0.6413          
+   Detection Prevalence : 0.6559          
+      Balanced Accuracy : 0.9723          
+                                          
+       'Positive' Class : 0               
+                                          </code></pre>
+</div>
+</div>
+<p>The percent chance the model falsely predicted cancer when not was 6/444 (1.4%) and the chance the model falsely predicted not having cancer when there was 9/239 (3.7%).</p>
+</section>
+</section>
+<section id="iii.-limitations" class="level2">
+<h2 class="anchored" data-anchor-id="iii.-limitations">iii. Limitations</h2>
+<p>There were no major limitations for this analysis but there were a few of things that needed to be done to the dataset in order to clean and make the dataset usable for analysis. First, we had to identify and remove all missing rows from the dataset. Second, we had to transform the response variable to be “0” and “1”. Finally, many of the variables seemed to show a left skew making us question if the variables should be transformed or not.&nbsp;</p>
+<p>There were only 699 samples for the dataset and although a solid number of samples, more samples would lead to a more predictable conclusion.&nbsp;</p>
+</section>
+<section id="iv.-conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="iv.-conclusion">iv. Conclusion</h2>
+<p>It seems that a significantly accurate model can be created to predict if a cancerous cell could be malignant using the measurements recorded in this dataset. To test this, we created multiple regression models, a random forest model, and a PCA analysis to understand the variables more thoroughly. &nbsp;</p>
+<p>In the PCA test we determined that the dataset’s variance could be explained by simplifying and using only 2 of 9 predictor variables. We then created multiple logistic regression models and compared them to each other to choose the best one. After variable transformation and selection, we determined the best model would be to use all the variables. The percent chance the model falsely predicted cancer when not was 10/444 (2.2%) and the chance the model falsely predicted not having cancer when there was 11/239 (4.6%). We then decided to try and create an optimal best random forest model, starting with a best fit decision tree model. The created model resulted in an overall accuracy rate of almost 98% with the percent chance the model falsely predicted cancer when not was 6/444 (1.4%) and the chance the model falsely predicted not having cancer when there was 9/239 (3.7%). Based on the two models we created, the best model to use would be the random forest model because of its high accuracy and predictability.&nbsp;</p>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<p>[1] Wolberg,WIlliam. (1992). Breast Cancer Wisconsin (Original). UCI Machine Learning Repository. https://doi.org/10.24432/C5HP4Z.&nbsp;</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>  - Grolemund G, Wickham H (2011). "Dates and Times Made Easy with lubridate." _Journal of Statistical Software_, *40*(3), 1-25. &lt;https://www.jstatsoft.org/v40/i03/&gt;.
+  - James G, Witten D, Hastie T, Tibshirani R (2021). _ISLR: Data for an Introduction to Statistical Learning with Applications in R_. R package version 1.4, &lt;https://CRAN.R-project.org/package=ISLR&gt;.
+  - Kuhn, Max (2008). "Building Predictive Models in R Using the caret Package." _Journal of Statistical Software_, *28*(5), 1–26. doi:10.18637/jss.v028.i05 &lt;https://doi.org/10.18637/jss.v028.i05&gt;, &lt;https://www.jstatsoft.org/index.php/jss/article/view/v028i05&gt;.
+  - Liaw A, Wiener M (2002). "Classification and Regression by randomForest." _R News_, *2*(3), 18-22. &lt;https://CRAN.R-project.org/doc/Rnews/&gt;.
+  - Makowski D, Lüdecke D, Patil I, Thériault R, Ben-Shachar M, Wiernik B (2023). "Automated Results Reporting as a Practical Tool to Improve Reproducibility and Methodological Best Practices Adoption." _CRAN_. &lt;https://easystats.github.io/report/&gt;.
+  - Miller TLboFcbA (2020). _leaps: Regression Subset Selection_. R package version 3.1, &lt;https://CRAN.R-project.org/package=leaps&gt;.
+  - Müller K, Wickham H (2023). _tibble: Simple Data Frames_. R package version 3.2.1, &lt;https://CRAN.R-project.org/package=tibble&gt;.
+  - R Core Team (2023). _R: A Language and Environment for Statistical Computing_. R Foundation for Statistical Computing, Vienna, Austria. &lt;https://www.R-project.org/&gt;.
+  - Ripley B (2023). _tree: Classification and Regression Trees_. R package version 1.0-43, &lt;https://CRAN.R-project.org/package=tree&gt;.
+  - Sarkar D (2008). _Lattice: Multivariate Data Visualization with R_. Springer, New York. ISBN 978-0-387-75968-5, &lt;http://lmdvr.r-forge.r-project.org&gt;.
+  - Sievert C (2020). _Interactive Web-Based Data Visualization with R, plotly, and shiny_. Chapman and Hall/CRC. ISBN 9781138331457, &lt;https://plotly-r.com&gt;.
+  - Wickham H (2007). "Reshaping Data with the reshape Package." _Journal of Statistical Software_, *21*(12), 1-20. &lt;http://www.jstatsoft.org/v21/i12/&gt;.
+  - Wickham H (2016). _ggplot2: Elegant Graphics for Data Analysis_. Springer-Verlag New York. ISBN 978-3-319-24277-4, &lt;https://ggplot2.tidyverse.org&gt;.
+  - Wickham H (2023). _forcats: Tools for Working with Categorical Variables (Factors)_. R package version 1.0.0, &lt;https://CRAN.R-project.org/package=forcats&gt;.
+  - Wickham H (2023). _stringr: Simple, Consistent Wrappers for Common String Operations_. R package version 1.5.1, &lt;https://CRAN.R-project.org/package=stringr&gt;.
+  - Wickham H, Averick M, Bryan J, Chang W, McGowan LD, François R, Grolemund G, Hayes A, Henry L, Hester J, Kuhn M, Pedersen TL, Miller E, Bache SM, Müller K, Ooms J, Robinson D, Seidel DP, Spinu V, Takahashi K, Vaughan D, Wilke C, Woo K, Yutani H (2019). "Welcome to the tidyverse." _Journal of Open Source Software_, *4*(43), 1686. doi:10.21105/joss.01686 &lt;https://doi.org/10.21105/joss.01686&gt;.
+  - Wickham H, François R, Henry L, Müller K, Vaughan D (2023). _dplyr: A Grammar of Data Manipulation_. R package version 1.1.4, &lt;https://CRAN.R-project.org/package=dplyr&gt;.
+  - Wickham H, Henry L (2023). _purrr: Functional Programming Tools_. R package version 1.0.2, &lt;https://CRAN.R-project.org/package=purrr&gt;.
+  - Wickham H, Hester J, Bryan J (2024). _readr: Read Rectangular Text Data_. R package version 2.1.5, &lt;https://CRAN.R-project.org/package=readr&gt;.
+  - Wickham H, Vaughan D, Girlich M (2024). _tidyr: Tidy Messy Data_. R package version 1.3.1, &lt;https://CRAN.R-project.org/package=tidyr&gt;.
+  - William Revelle (2024). _psych: Procedures for Psychological, Psychometric, and Personality Research_. Northwestern University, Evanston, Illinois. R package version 2.4.3, &lt;https://CRAN.R-project.org/package=psych&gt;.</code></pre>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
