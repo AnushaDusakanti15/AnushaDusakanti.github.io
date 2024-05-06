@@ -279,7 +279,7 @@ After pruning the tree and using 3 nodes to spilt the data below is the resultin
 Residual mean deviance:  0.03891 = 13.15 / 338 
 ```
 
-This is another strong model with a MSE of just .039. When comparing these models, their resdidual variances are very similar, as such we would likely choose the more simple model.
+This is another strong model with a MSE of just 0.039. When comparing these models, their resdidual variances are very similar, as such we would likely choose the more simple model.
 
 Lets now use a random forest model to prevent any potential overfitting of our decision tree model.
 
@@ -302,7 +302,7 @@ By creating a random forest model we were able to reduce the MSE from .039 to .0
 
 Taking a look a which variables were most important in the model.
 
-![](WhatsApp%20Image%202024-05-05%20at%2019.38.23.jpeg)
+![](images/clipboard-1963722952.png){width="650"}
 
 The variable that is important to reduce the mean standard error (MSE) is barenuceli and the variables that were deemed the most important to include in the node splitting were uniformcellsize and uniformcellshape.
 
