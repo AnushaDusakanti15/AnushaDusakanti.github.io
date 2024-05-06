@@ -1,12 +1,12 @@
 ---
-title: "Anusha Dusakanti"
+title: "ANUSHA DUSAKANTI"
 format: html
 editor: visual
 ---
 
 ## 
 
-Hi everyone, I am Anusha Dusakanti and welcome to my website.
+Hello, I am Anusha Dusakanti and welcome to my website.
 
 I am currently pursuing my Masters in Data Analytics Engineering at George Mason University.
 

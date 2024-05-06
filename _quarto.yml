@@ -6,8 +6,7 @@ website:
   title: Welcome!
   navbar: 
     left: 
-      - href: index.qmd
-        text: HOME
+      - index.qmd
       - about.qmd
       - Redesign.qmd
       - Final_KW.qmd
