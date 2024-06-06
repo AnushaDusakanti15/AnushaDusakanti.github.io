@@ -1,5 +1,5 @@
 ---
-title: "FINAL REPORT"
+title: "STAT515 FINAL PROJECT"
 format: html
 editor: visual
 ---

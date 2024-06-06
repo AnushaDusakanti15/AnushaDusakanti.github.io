@@ -25,7 +25,6 @@ library(randomForest)
 library(caret)})
 ```
 
-
 ```{r}
 url <- "https://raw.githubusercontent.com/KyleWandel/STAT-515-Final-Project/main/breast-cancer-wisconsin.csv"
 df <- read.table(url, header = TRUE, sep = ",")
@@ -58,9 +57,11 @@ We next wanted to identify if there were any patterns amongst the predictor vari
 plot_title <- "Pairs Panel Plot for Breast Cancer Dataset"
 pairs.panels(df_clean,  main = plot_title)
 ```
+
 Principal Component Analysis
 
 We first took a look at the mean and variances of the variables in the dataset to see if the variables should be scaled or not. Below are the means an variances of the variables:
+
 ```{r}
 PCA_df <- df_clean[, -ncol(df_clean)]
 states=row.names(PCA_df)
@@ -69,6 +70,7 @@ apply(PCA_df, 2, var)
 apply(PCA_df, 2, sd)
 # There is difference in the mean and variance, so we do should scale/standardize the variables.
 ```
+
 After running a PCA analysis found that most of the variables are grouped indicating that there are similar observations based on the variable values. There are not too many outliers to indicate any unusual observations.
 
 ```{r}
@@ -199,6 +201,7 @@ df_clean$benormal <- ifelse(df_clean$benormal == 4, 1, ifelse(df_clean$benormal 
 ```
 
 Creating a random forest model
+
 ```{r}
 cancer_rf=randomForest(benormal~.,data=df_clean,subset=train,mtry=3,importance=TRUE)
 yhat.rf = predict(cancer_rf,newdata=df_clean[-train,])

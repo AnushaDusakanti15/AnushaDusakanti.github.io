@@ -10,7 +10,7 @@ website:
       - about.qmd
       - Redesign.qmd
       - FinalReport.qmd
-      - FinalWebpage.qmd
+      - aitpro.qmd
       
 
 format: 
