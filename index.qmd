@@ -12,4 +12,6 @@ I am currently pursuing my Masters in Data Analytics Engineering at George Mason
 
 My passion to learn about data and its applications, made me choose this course for my Masters. I am confident that my proficiency in Java, Python, AWS will aid me in completing this course and I am looking forward to learn about R and using it for data visualizations.
 
-To check out my projects of the course STAT515, please navigate to .
+To check out my projects of the course STAT515, please navigate to [MidProject](https://anushadusakanti15.github.io/Redesign.html) and [FinalProject](https://anushadusakanti15.github.io/FinalReport.html).
+
+To see my final project report of AIT580 course, please click [here](https://anushadusakanti15.github.io/aitpro.html).
